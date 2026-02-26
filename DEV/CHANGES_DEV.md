@@ -13,6 +13,12 @@
 - Drastically reduces XML token overhead for autonomous IDE agents
 - `omega.py` wizard now automatically scaffolds `logging/`
 
+### Mode-Based Checkpoint Autonomy
+- Updated `INSTRUCTOR.xml` Prime Directives
+- Added explicit `<checkpoint_autonomy>` block
+- Autonomous IDE extensions (Antigravity/Cursor) can now self-approve non-critical checkpoints when operating in `JUST BUILD` or `QUICK START` mode.
+- Preserved strict human-gates for CP-5 (Dependencies) and CP-10 (Release).
+
 ### IDE Agent Routing
 - Added explicit `<directory_enforcement>` to `INSTRUCTOR.xml`
 - AI must now write production code exclusively into `USER SPACE/project/`

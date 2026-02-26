@@ -44,8 +44,8 @@ To directly address the final friction points of the framework, the following ag
 *   **The Workflow:** If the Python auditor detects a violation (e.g., wrong folder structure, missing error handling), it automatically writes a flag to the new `USER SPACE/logging/compliance_report.md` file. The active AI agent simply checks this lightweight log, skipping the massive XMLs entirely unless explicitly commanded to conduct a rigorous manual audit.
 
 ### 2. Mode-Based Checkpoint Autonomy
-**Status:** ⏳ PENDING EXECUTION
-**The Plan:** Wire `INSTRUCTOR.xml` to actively read the `Mode` (e.g., Quick Start, Just Build) declared in `SESSION_CONTEXT.md`. If the user has selected an autonomous mode, the AI is explicitly permitted to self-approve and bypass standard checkpoints, preserving hard stops only for critical, dangerous steps.
+**Status:** ✅ LIVE
+**The Implementation:** Wired `INSTRUCTOR.xml` to actively read the `Mode` (e.g., Quick Start, Just Build) declared in `SESSION_CONTEXT.md`. Autonomous agents (like Antigravity or Cursor) are now explicitly permitted to self-approve and bypass non-critical checkpoints, preserving hard human-review gates only for critical, dangerous steps (CP-5 and CP-10).
 
 ---
 

@@ -97,6 +97,57 @@
   </intelligent_loading>
 
   <!-- ============================================================
+       PART 0.6: USER SPACE STRUCTURE
+       Where user files live and what goes where
+  ============================================================ -->
+
+  <user_space_structure name="USER_SPACE">
+    <description>
+      USER SPACE contains two zones: dev-work (framework files) and project (clean deliverable).
+      Users only touch USER SPACE/. Everything else is for the AI.
+    </description>
+
+    <zones>
+      <zone name="dev-work" path="USER SPACE/dev-work/">
+        <purpose>Framework files used during development. Don't share this folder.</purpose>
+        <contents>
+          <folder name="seed/">Project requirements (PROJECT.md, BRAND.md, TECH_STACK.md, etc.)</folder>
+          <folder name="phases/">Phase planning and PRDs</folder>
+          <folder name="plug-and-play/">Drop zone for existing files and store items</folder>
+          <folder name="docs/">Generated docs (PRD, specs)</folder>
+          <file name="SESSION_CONTEXT.md">AI working memory</file>
+          <file name="TRACKER.md">Progress tracking</file>
+        </contents>
+      </zone>
+
+      <zone name="project" path="USER SPACE/project/">
+        <purpose>Clean deliverable. Share this folder. Always ready for handoff.</purpose>
+        <contents>
+          <folder name="src/">Source code</folder>
+          <folder name="tests/">Test files</folder>
+          <folder name="public/">Static assets</folder>
+          <file name="README.md">Project documentation</file>
+        </contents>
+      </zone>
+    </zones>
+
+    <plug_and_play_subdirs path="USER SPACE/dev-work/plug-and-play/">
+      <dir name="frontend/">Existing frontend code</dir>
+      <dir name="backend/">Existing backend code</dir>
+      <dir name="existing/">Complete existing projects</dir>
+      <dir name="designs/">Wireframes, mockups, Figma links</dir>
+      <dir name="kits/">Kit installations from store</dir>
+      <dir name="skills/">Skill installations from store</dir>
+      <dir name="mcps/">MCP configurations from store</dir>
+    </plug_and_play_subdirs>
+
+    <handoff_rule>
+      When project is complete: USER SPACE/project/ is the deliverable.
+      No compilation needed. It's always clean and ready to share.
+    </handoff_rule>
+  </user_space_structure>
+
+  <!-- ============================================================
        PART 1: O.M.E.G.A (THE PRECONDITIONS)
        Before a project moves, these five elements must exist
   ============================================================ -->

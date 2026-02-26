@@ -198,12 +198,33 @@
 
       <checkpoints>
         <checkpoint id="CP-ONBOARD" name="ONBOARDING" mandatory="true">
-          BEFORE ANYTHING ELSE: Follow ONBOARDING.md exactly.
-          Step 1: Mode Selection (Full/Quick/Lite/Just Build)
-          Step 2: Project Type (Website/App/API/Automation/Other)
-          Step 3: Existing Work Detection (Fresh/Have Frontend/Have Backend/Both/Designs)
-          Step 4: Quick Context (1-2 sentence purpose)
-          NO DEVIATION. ONE QUESTION AT A TIME. WAIT FOR ANSWERS.
+          BEFORE ANYTHING ELSE: Follow ONBOARDING.md exactly. One question at a time.
+
+          Step 1 - INTENT: "What do you need?"
+            - Build something → Continue to Step 2
+            - Learn first → Explain system, then ask "Ready to build?"
+            - Get help → Answer question, then ask "Anything else?"
+
+          Step 2 - MODE: "How would you like to work?"
+            - Full Discovery / Quick Start / Lite / Just Build
+
+          Step 3 - PROJECT TYPE: "What are you building?"
+            - Website / Web App / API / Automation / Other
+            - This triggers kit activation
+
+          Step 4 - EXISTING WORK: "Do you have existing work?"
+            - Starting fresh → Help scaffold: ask name, audience, main feature
+            - Have frontend → "Put in USER SPACE/dev-work/plug-and-play/frontend/"
+            - Have backend → "Put in USER SPACE/dev-work/plug-and-play/backend/"
+            - Have both → "Put in USER SPACE/dev-work/plug-and-play/existing/"
+            - Have designs → "Put in USER SPACE/dev-work/plug-and-play/designs/"
+
+          Step 5 - PURPOSE: "In 1-2 sentences, what's the core purpose?"
+
+          Step 6 - CONFIRM: Show summary, get approval, then proceed.
+
+          RULES: No deviation. One question at a time. Wait for answers.
+          ALWAYS tell users WHERE to put files.
         </checkpoint>
         <checkpoint id="CP-0" name="SEED SCAN">After onboarding, read all files. Report what exists, what's missing, what's incomplete.</checkpoint>
         <checkpoint id="CP-1" name="INITIALISATION">Summarise understanding. Ask questions for gaps. Propose phases if none exist.</checkpoint>
@@ -563,19 +584,41 @@ STOP REPORT
 
   <drop_zones>
     <description>
-      The drop zone is USER SPACE/dev-work/plug-and-play/. Users place existing work here
-      alongside store items (kits, skills, mcps).
+      The drop zone is USER SPACE/dev-work/plug-and-play/. Users place existing work here.
+      ALWAYS tell users exactly where to put their files based on what they have.
     </description>
 
     <location>USER SPACE/dev-work/plug-and-play/</location>
 
+    <subdirectories>
+      <dir name="frontend/">For existing frontend/UI code (React, Vue, etc.)</dir>
+      <dir name="backend/">For existing backend/API code</dir>
+      <dir name="existing/">For complete existing projects</dir>
+      <dir name="designs/">For wireframes, mockups, Figma links, images</dir>
+      <dir name="kits/">For kit installations from store</dir>
+      <dir name="skills/">For skill installations from store</dir>
+      <dir name="mcps/">For MCP configurations from store</dir>
+    </subdirectories>
+
+    <file_location_reference>
+      When user says they have existing work, TELL THEM WHERE TO PUT IT:
+      | They Have | Tell Them |
+      |-----------|-----------|
+      | Frontend code | "Put it in USER SPACE/dev-work/plug-and-play/frontend/" |
+      | Backend code | "Put it in USER SPACE/dev-work/plug-and-play/backend/" |
+      | Full project | "Put it in USER SPACE/dev-work/plug-and-play/existing/" |
+      | Designs/wireframes | "Put it in USER SPACE/dev-work/plug-and-play/designs/" |
+    </file_location_reference>
+
     <detection_protocol>
       <when>At CP-0 (Seed Scan)</when>
-      <step order="1">Scan plug-and-play/ for all files</step>
+      <step order="1">Scan plug-and-play/ and all subdirectories</step>
       <step order="2">Identify store items (kits/, skills/, mcps/) — auto-activate</step>
-      <step order="3">Identify other files (wireframes, code, PDFs, images)</step>
-      <step order="4">If unknown files found, ask user: "I found files in plug-and-play. What are these?"</step>
-      <step order="5">Based on response, suggest appropriate import task</step>
+      <step order="3">Identify frontend/ — note framework, structure</step>
+      <step order="4">Identify backend/ — note language, endpoints</step>
+      <step order="5">Identify existing/ — analyze full project structure</step>
+      <step order="6">Identify designs/ — note wireframes, mockups</step>
+      <step order="7">If unknown files found, ask: "I found files in plug-and-play. What are these?"</step>
     </detection_protocol>
 
     <alternative_import>
@@ -583,6 +626,7 @@ STOP REPORT
       - "My wireframes are at /path/to/wireframes"
       - "Import brand from https://figma.com/..."
       - "My existing code is in /projects/old-site"
+      - "My frontend is at /path/to/frontend"
     </alternative_import>
 
     <post_import>

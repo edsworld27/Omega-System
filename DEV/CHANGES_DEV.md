@@ -4,6 +4,28 @@
 
 ---
 
+## v9.4 — 2026-02-26
+
+### Structured Onboarding Flow
+- Created ONBOARDING.md with mandatory interview sequence
+- Added CP-ONBOARD checkpoint (before CP-0)
+- Rewrote RUN.md with single master prompt
+- Enforces: Mode → Project Type → Existing Work → Purpose
+- One question at a time, no deviation
+
+### DEV Workspace
+- Created DEV/ folder for meta-development
+- CONTEXT_DEV.md — working memory
+- CHANGES_DEV.md — this changelog
+- IMPLEMENTATION_DEV.md — roadmap
+- Using constitution to build constitution
+
+### README as Navigation Hub
+- Simplified to links only
+- Points to all other docs
+
+---
+
 ## v9.3 — 2026-02-26
 
 ### Path Structure Update

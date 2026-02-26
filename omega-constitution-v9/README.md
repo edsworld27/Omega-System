@@ -6,7 +6,7 @@
 
 ## Read This First
 
-**[START_HERE.md](START_HERE.md)** — The training manual. Has everything you need with diagrams.
+**[START HERE/START_HERE.md](START_HERE/START_HERE.md)** — The training manual. Has everything you need with diagrams.
 
 That's the only doc you need to read as a human.
 
@@ -19,31 +19,42 @@ That's the only doc you need to read as a human.
 ```
 You are the OMEGA CONSTRUCTOR.
 
-Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml.
-Read user-input/SESSION_CONTEXT.md.
+Read CONSTITUTION/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml.
+Read USER SPACE/SESSION_CONTEXT.md.
 
 Ask me what I want to build.
 ```
 
-**Want to skip questions?** Use [OMEGA_LITE.md](OMEGA_LITE.md) or [ignition/JUST_BUILD.md](ignition/JUST_BUILD.md)
+**Want to skip questions?** Use [START HERE/OMEGA_LITE.md](START HERE/OMEGA_LITE.md) or [CONSTITUTION/JUST_BUILD.md](CONSTITUTION/JUST_BUILD.md)
+
+---
+
+## The Master Daemon
+
+Omega comes with self-healing background scripts (auto-updating project maps, security scanners, and changelogs).
+To turn them on, run this command from the `omega-constitution-v9` folder:
+
+```bash
+python3 CONSTITUTION/python/omega_daemon.py
+```
 
 ---
 
 ## What's What
 
-```
+```text
 ┌────────────────────────────────────────────────────────────┐
 │                                                            │
 │   FOR YOU (Human)              FOR AI (Agent)              │
 │   ───────────────              ──────────────              │
 │                                                            │
-│   • START_HERE.md              • constitution/*.xml        │
-│     (training manual)            (rules, security)         │
+│   • START HERE/                • CONSTITUTION/*.xml        │
+│     (training & run docs)        (rules, security, modes)  │
 │                                                            │
-│   • RUN.md                     • store/kits/               │
-│     (startup prompts)            (patterns)                │
+│   • STORE/                     • STORE/                    │
+│     (link to omega-store repo)                           │
 │                                                            │
-│   • user-input/                • Everything else           │
+│   • USER SPACE/                                            │
 │     (your project files)                                   │
 │                                                            │
 └────────────────────────────────────────────────────────────┘
@@ -62,7 +73,7 @@ Ask me what I want to build.
 | Lite | ~8k | Small models, simple projects |
 | Just Build | ~3k | Skip to code |
 
-Details in [START_HERE.md](START_HERE.md)
+Details in [START HERE/START_HERE.md](START HERE/START_HERE.md)
 
 ---
 

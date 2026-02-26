@@ -106,6 +106,7 @@
       <command trigger="Next phase">Pass CP-7, define next phase</command>
       <command trigger="Deploy">Pass CP-10, release</command>
       <command trigger="Fix and Retest">Reject test results, enter Repair Loop</command>
+      <command trigger="Compile">Pass CP-11, trigger omega_compiler.py to eject the final codebase to the Desktop</command>
       <command trigger="Stop">Immediate halt. Await further instructions.</command>
     </human_commands>
   </command_pattern>

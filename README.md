@@ -1,4 +1,4 @@
-# OMEGA CONSTITUTION PACK
+# OMEGA CONSTITUTION PACK — v9
 
 **Build anything with AI, the right way.**
 
@@ -6,37 +6,19 @@ A framework that makes AI build things properly — safe, complete, and flexible
 
 ---
 
-## Current Version: v9
+## The Core 4 Structure
 
-```
+The Omega Constitution v9 is organized into 4 simple pillars:
+
+```text
 omega-constitution-v9/
+├── START HERE/        ◄── Readmes, training manuals, and startup prompts
+├── CONSTITUTION/      ◄── The AI rules and framework (XML, AI reads this)
+├── USER SPACE/        ◄── Your actual project files go here
+└── STORE/             ◄── Link to the external Omega Store repo (kits, skills, MCPs)
 ```
 
-**Start here:** [omega-constitution-v9/START_HERE.md](omega-constitution-v9/START_HERE.md)
-
-That's the training manual. It has everything you need.
-
----
-
-## What This Does
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   You describe what you want                                │
-│              │                                              │
-│              ▼                                              │
-│   AI follows the constitution (rules, patterns, security)  │
-│              │                                              │
-│              ▼                                              │
-│   You get working code that's safe and complete            │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**The problem:** AI builds incomplete things, misses edge cases, exposes secrets.
-
-**The solution:** A constitution the AI follows. Security rules it can't bypass. Patterns it loads automatically. Questions it asks so nothing gets missed.
+**[START HERE/START_HERE.md](START_HERE/START_HERE.md)** is your training manual. It has everything you need.
 
 ---
 
@@ -55,6 +37,17 @@ Ask me what I want to build.
 ```
 
 3. Talk. The AI guides you.
+
+---
+
+## The Master Daemon
+
+Omega comes with self-healing background scripts (auto-updating project maps, security scanners, and changelogs).
+To turn them on, run this command from the `omega-constitution-v9` folder:
+
+```bash
+python3 CONSTITUTION/python/omega_daemon.py
+```
 
 ---
 

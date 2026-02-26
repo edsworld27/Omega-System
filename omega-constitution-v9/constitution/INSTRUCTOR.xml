@@ -368,40 +368,72 @@ STOP REPORT
   <context_window_management>
     <description>
       The pack is large. Not every model can hold everything at once.
-      Use tiered loading to maximise effectiveness within your model's context window.
+      Use the Working Memory system to reduce context pressure.
     </description>
 
+    <working_memory>
+      <file>user-input/SESSION_CONTEXT.md</file>
+      <purpose>
+        Instead of holding all seeds, kit details, and findings in context,
+        write summaries to SESSION_CONTEXT.md and reference it as needed.
+        This reduces active context from ~85k to ~40k tokens.
+      </purpose>
+
+      <protocol>
+        <step order="1">At session start, read SESSION_CONTEXT.md first</step>
+        <step order="2">If empty or stale, scan seeds and write findings to it</step>
+        <step order="3">Update SESSION_CONTEXT.md after each significant action</step>
+        <step order="4">Reference SESSION_CONTEXT.md instead of re-reading full files</step>
+        <step order="5">Only read full files when you need specific details not in the summary</step>
+      </protocol>
+
+      <what_to_write>
+        <item>Project summary (name, type, north star, user)</item>
+        <item>Requirements status (which seeds filled, which blank)</item>
+        <item>Key decisions (locked choices that won't change)</item>
+        <item>Open questions (things still to decide)</item>
+        <item>Current checkpoint and blockers</item>
+        <item>File index (what you've scanned, brief summary of each)</item>
+        <item>Session log (what happened, results)</item>
+      </what_to_write>
+
+      <when_to_update>
+        <trigger>After completing a checkpoint</trigger>
+        <trigger>After filling a seed file</trigger>
+        <trigger>After a key decision is made</trigger>
+        <trigger>After scanning new files</trigger>
+        <trigger>Before ending a session</trigger>
+      </when_to_update>
+    </working_memory>
+
     <loading_priority>
-      <tier number="1" name="Always" tokens="~35k">
-        SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml
-        <note>Every session. Non-negotiable.</note>
+      <tier number="1" name="Always" tokens="~20k">
+        SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml, SESSION_CONTEXT.md
+        <note>Every session. Non-negotiable. SESSION_CONTEXT.md is your memory.</note>
       </tier>
-      <tier number="2" name="Core" tokens="~10k">
-        PRACTICES.xml, QUALITY.xml, SOURCES.xml, Active Seeds (PROJECT.md + filled seeds)
-        <note>Every session if space permits.</note>
+      <tier number="2" name="Active Work" tokens="~15k">
+        Current kit PROMPTER.md, active blueprint (if generating docs)
+        <note>Load what you're actively working with.</note>
       </tier>
-      <tier number="3" name="On Demand" tokens="~25k">
-        PROMPTING.xml (when generating documents), blueprints (when creating that doc type)
-        <note>Load when the specific capability is needed.</note>
-      </tier>
-      <tier number="4" name="Reference" tokens="~15k">
-        Kits, Skills
-        <note>Load the specific kit/skill when that project type is active.</note>
+      <tier number="3" name="On Demand" tokens="varies">
+        Full seed files, PROMPTING.xml, kit patterns, other blueprints
+        <note>Read when needed, write summary to SESSION_CONTEXT.md, unload.</note>
       </tier>
     </loading_priority>
 
     <model_guidance>
-      <model name="Claude 3.5+" context="200k">Load Tiers 1-3 upfront. Load Tier 4 as needed.</model>
-      <model name="GPT-4 Turbo+" context="128k">Load Tiers 1-2 upfront. Load Tier 3-4 on demand.</model>
-      <model name="Gemini 1.5 Pro" context="1M+">Load everything. No constraints.</model>
-      <model name="Smaller models" context="&lt;32k">Load Tier 1 only. Summarise SECURITY.xml to key directives. Load other files one at a time as needed.</model>
+      <model name="Claude 3.5+" context="200k">Use working memory. Load Tier 1-2, scan Tier 3 and summarise.</model>
+      <model name="GPT-4 Turbo+" context="128k">Use working memory aggressively. Tier 1 only in context, everything else via SESSION_CONTEXT.md.</model>
+      <model name="Gemini 1.5 Pro" context="1M+">Can load more, but working memory still helps session continuity.</model>
+      <model name="Smaller models" context="&lt;32k">Working memory essential. Load minimal Tier 1, rely heavily on SESSION_CONTEXT.md.</model>
     </model_guidance>
 
     <rules>
-      <rule>Never skip Tier 1. The Constitution, Security, and Instructor are always loaded.</rule>
-      <rule>Seeds before blueprints. Project context matters more than templates.</rule>
-      <rule>Load templates just-in-time. When generating a PRD, load PRD.md at that moment — not at session start.</rule>
-      <rule>If resuming: STATE.md + progress.md + active PRD replace the need for many seeds.</rule>
+      <rule>SESSION_CONTEXT.md is your persistent brain. Read it first, update it often.</rule>
+      <rule>Never skip Tier 1. Security and Instructor are always loaded.</rule>
+      <rule>Summarise, don't hoard. Write findings to SESSION_CONTEXT.md, then free the context.</rule>
+      <rule>Load templates just-in-time. Read, use, summarise key points, unload.</rule>
+      <rule>If resuming: SESSION_CONTEXT.md tells you everything. Start there.</rule>
     </rules>
   </context_window_management>
 

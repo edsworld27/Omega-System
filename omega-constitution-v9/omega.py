@@ -17,6 +17,8 @@ PROJECT = os.path.join(USER_SPACE, "project")
 SEED_DIR = os.path.join(DEV_WORK, "seed")
 LOGGING_DIR = os.path.join(USER_SPACE, "logging")
 PLUG_AND_PLAY = os.path.join(DEV_WORK, "plug-and-play")
+OMEGA_CLAW_DIR = os.path.join(SCRIPT_DIR, "omega-claw")
+OMEGA_CLAW_REPO = "https://github.com/edsworld27/omega-claw.git"
 
 
 def clear():
@@ -182,6 +184,48 @@ def copy_to_clipboard(text):
     return False
 
 
+def install_omega_claw():
+    """Clone and set up Omega Claw for remote Telegram control."""
+    import subprocess
+    
+    if os.path.exists(OMEGA_CLAW_DIR):
+        print("\n🦀 Omega Claw is already installed!")
+        print(f"   Location: {OMEGA_CLAW_DIR}")
+        return True
+    
+    print("\n🦀 Installing Omega Claw...")
+    print(f"   Cloning from: {OMEGA_CLAW_REPO}")
+    
+    try:
+        subprocess.run(["git", "clone", OMEGA_CLAW_REPO, OMEGA_CLAW_DIR], check=True)
+    except Exception as e:
+        print(f"\n❌ Failed to clone: {e}")
+        print(f"   You can manually clone: git clone {OMEGA_CLAW_REPO}")
+        return False
+    
+    print("\n✅ Omega Claw installed!")
+    
+    # Ask for Telegram token
+    print("\n🔑 To go live, you need a Telegram Bot Token.")
+    print("   Get one free from @BotFather on Telegram (takes 60 seconds).")
+    token = ask("Paste your Telegram Bot Token (or press Enter to skip):")
+    
+    if token and token.strip():
+        env_path = os.path.join(OMEGA_CLAW_DIR, ".env")
+        with open(env_path, 'w') as f:
+            f.write(f"TELEGRAM_BOT_TOKEN={token.strip()}\n")
+            f.write(f"OMEGA_HIVE_DIR={os.path.join(DEV_WORK, 'hive')}\n")
+        print("\n✅ Token saved to .env")
+        print("\n🚀 To start Omega Claw:")
+        print(f"   cd {OMEGA_CLAW_DIR}")
+        print("   pip install -r requirements.txt")
+        print("   python main.py")
+    else:
+        print("\n⏭️  Skipped. Add your token later in omega-claw/.env")
+    
+    return True
+
+
 def main():
     clear()
     print_banner()
@@ -253,6 +297,14 @@ def main():
     # Setup
     print("\n⚙️  Setting up your project...")
     setup_folders()
+
+    # Optional: Omega Claw
+    claw = ask("Want to install Omega Claw for remote Telegram control?", [
+        "Yes — Install Omega Claw",
+        "No — Skip for now"
+    ])
+    if claw == 1:
+        install_omega_claw()
 
     type_names = {1: "Website", 2: "Web App", 3: "API", 4: "Automation", 5: "Other"}
     mode_names = {1: "Full Discovery", 2: "Quick Start", 3: "Lite", 4: "Just Build"}

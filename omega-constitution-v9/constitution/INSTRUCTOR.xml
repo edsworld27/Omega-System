@@ -213,7 +213,7 @@
             - This triggers kit activation
 
           Step 4 - EXISTING WORK: "Do you have existing work?"
-            - Starting fresh → Help scaffold: ask name, audience, main feature
+            - Starting fresh → Ask name, audience, main feature, then scaffold using kit's STRUCTURE.md
             - Have frontend → "Put in USER SPACE/dev-work/plug-and-play/frontend/"
             - Have backend → "Put in USER SPACE/dev-work/plug-and-play/backend/"
             - Have both → "Put in USER SPACE/dev-work/plug-and-play/existing/"
@@ -222,6 +222,9 @@
           Step 5 - PURPOSE: "In 1-2 sentences, what's the core purpose?"
 
           Step 6 - CONFIRM: Show summary, get approval, then proceed.
+
+          SCAFFOLDING RULE: When starting fresh, read the activated kit's STRUCTURE.md for folder layout.
+          Each kit defines its own project structure. Website ≠ API ≠ SaaS ≠ Automation.
 
           RULES: No deviation. One question at a time. Wait for answers.
           ALWAYS tell users WHERE to put files.

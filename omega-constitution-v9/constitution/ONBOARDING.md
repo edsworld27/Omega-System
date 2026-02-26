@@ -118,28 +118,56 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 ═══════════════════════════════════════════════════════════
 ```
 
-**After they answer, create the scaffolding:**
+**After they answer, read the activated kit's STRUCTURE.md to scaffold:**
 ```
 ═══════════════════════════════════════════════════════════
   SETTING UP YOUR PROJECT
 ═══════════════════════════════════════════════════════════
 
-  Creating your project structure in:
+  Based on your project type ([kit name]), I'll create:
+
   📁 USER SPACE/project/
+  [Structure from kit's STRUCTURE.md]
 
-  I'll create:
-  ├── src/           ← Your source code
-  ├── public/        ← Static assets
-  ├── tests/         ← Test files
-  └── README.md      ← Project documentation
+  Example structures by kit:
 
-  And I'll fill in your seeds:
+  WEBSITE KIT:
+  ├── pages/          ← Page components
+  ├── components/     ← Reusable UI
+  ├── assets/         ← Images, fonts
+  ├── styles/         ← CSS/styling
+  └── public/         ← Static files
+
+  SAAS KIT:
+  ├── src/app/        ← App routes
+  ├── src/api/        ← API routes
+  ├── src/components/ ← UI components
+  ├── src/lib/        ← Utilities
+  └── prisma/         ← Database schema
+
+  API KIT:
+  ├── routes/         ← API endpoints
+  ├── controllers/    ← Business logic
+  ├── models/         ← Data models
+  ├── middleware/     ← Auth, validation
+  └── tests/          ← API tests
+
+  AUTOMATION KIT:
+  ├── workflows/      ← Workflow definitions
+  ├── triggers/       ← Event triggers
+  ├── actions/        ← Action handlers
+  └── config/         ← Configuration
+
+  I'll also fill in your seeds:
   📝 dev-work/seed/PROJECT.md — Your project brief
   📝 dev-work/seed/TECH_STACK.md — Technology choices
 
   Ready to scaffold? (yes/no)
 ═══════════════════════════════════════════════════════════
 ```
+
+**IMPORTANT:** Always read the activated kit's STRUCTURE.md for the actual folder layout.
+The kit determines the project structure, not this generic example.
 
 **Then proceed to kit PROMPTER for domain-specific questions.**
 

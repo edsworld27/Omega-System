@@ -31,6 +31,7 @@ Answers a few questions → Sets everything up → Gives you a prompt.
 |:-------|:-------------|
 | [omega-constitution-v9/](omega-constitution-v9/) | The framework |
 | [omega-store/](omega-store/) | Kits, skills, MCPs |
+| [omega-claw](https://github.com/edsworld27/omega-claw) | Remote control (Telegram bot) |
 | [DEV/](DEV/) | Framework development |
 
 ---
@@ -59,6 +60,7 @@ Answers a few questions → Sets everything up → Gives you a prompt.
 ## Links
 
 - [omega-constitution](https://github.com/edsworld27/omega-constitution)
+- [omega-claw](https://github.com/edsworld27/omega-claw)
 - [omega-store](https://github.com/edsworld27/omega-store)
 
 ---

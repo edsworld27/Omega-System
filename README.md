@@ -4,66 +4,62 @@
 
 ---
 
-## Start Here
+## Quick Start (Pick One)
 
-| Guide | Description |
-|:------|:------------|
-| [Training Manual](omega-constitution-v9/START%20HERE/START_HERE.md) | Everything you need to know |
-| [Startup Prompts](omega-constitution-v9/START%20HERE/RUN.md) | All the prompts to get going |
-| [Lite Mode](omega-constitution-v9/START%20HERE/OMEGA_LITE.md) | Condensed rules for small models |
+### Option 1: One-Liner
+```
+You are OMEGA. Read constitution/. Guide me.
+```
+Copy → Paste into AI → Go.
+
+### Option 2: Setup Script
+```bash
+cd omega-constitution-v9
+python3 omega.py
+```
+Answers a few questions → Sets everything up → Gives you a prompt.
+
+### Option 3: Read First
+→ [GO.md](omega-constitution-v9/GO.md) — Simplest start
+→ [Training Manual](omega-constitution-v9/START%20HERE/START_HERE.md) — Full guide
 
 ---
 
-## The Framework
+## What's Here
 
-| Folder | What's Inside |
-|:-------|:--------------|
-| [omega-constitution-v9/](omega-constitution-v9/) | The complete framework |
-| [CONSTITUTION/](omega-constitution-v9/CONSTITUTION/) | AI rules (XML files) |
-| [USER SPACE/](omega-constitution-v9/USER%20SPACE/) | Your project files |
+| Folder | What It Does |
+|:-------|:-------------|
+| [omega-constitution-v9/](omega-constitution-v9/) | The framework |
+| [omega-store/](omega-store/) | Kits, skills, MCPs |
+| [DEV/](DEV/) | Framework development |
 
 ---
 
-## The Store
+## Docs
+
+| Doc | Purpose |
+|:----|:--------|
+| [GO.md](omega-constitution-v9/GO.md) | Simplest start |
+| [RUN.md](omega-constitution-v9/START%20HERE/RUN.md) | All prompts |
+| [START_HERE.md](omega-constitution-v9/START%20HERE/START_HERE.md) | Training manual |
+| [OMEGA_LITE.md](omega-constitution-v9/START%20HERE/OMEGA_LITE.md) | Small models |
+
+---
+
+## Store
 
 | Resource | Description |
 |:---------|:------------|
-| [Kits](omega-store/kits/) | Project templates (website, saas, api) |
-| [Kit Creation Guide](omega-store/kits/KIT_CREATION_GUIDE.md) | Build your own kit |
-| [Kit Export Guide](omega-store/kits/KIT_EXPORT_GUIDE.md) | Turn projects into kits |
+| [Kits](omega-store/kits/) | Project templates |
+| [Kit Creation Guide](omega-store/kits/KIT_CREATION_GUIDE.md) | Make your own |
 | [Skills](omega-store/skills/) | Agent templates |
-| [MCPs](omega-store/mcps/) | MCP configurations |
-
----
-
-## Development
-
-| File | Purpose |
-|:-----|:--------|
-| [DEV/](DEV/) | Meta-development workspace |
-| [CONTEXT_DEV.md](DEV/CONTEXT_DEV.md) | Current state & session notes |
-| [CHANGES_DEV.md](DEV/CHANGES_DEV.md) | Constitution changelog |
-| [IMPLEMENTATION_DEV.md](DEV/IMPLEMENTATION_DEV.md) | Roadmap & ideas |
-
----
-
-## Quick Start
-
-```
-You are the OMEGA CONSTRUCTOR.
-
-Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml.
-Read USER SPACE/dev-work/SESSION_CONTEXT.md.
-
-Ask me what I want to build.
-```
 
 ---
 
 ## Links
 
-- [omega-constitution](https://github.com/edsworld27/omega-constitution) — Framework repo
-- [omega-store](https://github.com/edsworld27/omega-store) — Kits & tools repo
+- [omega-constitution](https://github.com/edsworld27/omega-constitution)
+- [omega-store](https://github.com/edsworld27/omega-store)
 
 ---
 

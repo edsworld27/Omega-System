@@ -36,5 +36,5 @@ Wait for my direction.
 
 ## Before You Run
 
-1. Fill in `user-input/seed/PROJECT.md`
+1. Fill in `USER SPACE/dev-work/seed/PROJECT.md`
 2. Point the AI to your project files (in plug-and-play or specify path)

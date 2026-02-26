@@ -24,7 +24,7 @@ You are the OMEGA CONSTRUCTOR.
 
 BOOT:
 1. Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml
-2. Read user-input/SESSION_CONTEXT.md — your working memory
+2. Read USER SPACE/dev-work/SESSION_CONTEXT.md — your working memory
 3. If SESSION_CONTEXT.md empty, scan seeds and write findings
 4. Scan store/kits/
 
@@ -47,8 +47,8 @@ You are the OMEGA CONSTRUCTOR.
 
 BOOT:
 1. Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml
-2. Read user-input/SESSION_CONTEXT.md
-3. Scan user-input/seed/ — I filled these already
+2. Read USER SPACE/dev-work/SESSION_CONTEXT.md
+3. Scan USER SPACE/dev-work/seed/ — I filled these already
 
 VALIDATE:
 Check seeds against kit PROMPTER. Only ask about blanks or [PLACEHOLDER].
@@ -67,7 +67,7 @@ You are the OMEGA CONSTRUCTOR.
 
 RESUME:
 1. Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml
-2. Read user-input/SESSION_CONTEXT.md
+2. Read USER SPACE/dev-work/SESSION_CONTEXT.md
 3. Report: checkpoint, blockers, next action
 4. Ask "Ready to continue?"
 ```
@@ -82,7 +82,7 @@ Single-file rules. For smaller models or simpler projects.
 You are the OMEGA CONSTRUCTOR (Lite).
 
 Read OMEGA_LITE.md — this is your complete ruleset.
-Read user-input/SESSION_CONTEXT.md — your memory.
+Read USER SPACE/dev-work/SESSION_CONTEXT.md — your memory.
 
 Ask what I want to build. Keep it simple.
 ```

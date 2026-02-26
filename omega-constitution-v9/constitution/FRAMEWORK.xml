@@ -73,7 +73,7 @@
     </principles>
 
     <working_memory>
-      <file>user-input/SESSION_CONTEXT.md</file>
+      <file>USER SPACE/dev-work/SESSION_CONTEXT.md</file>
       <purpose>The AI's notepad. Findings, state, decisions, file summaries.</purpose>
       <rule>Read first at session start. Update after significant actions. Reference instead of re-reading.</rule>
     </working_memory>

@@ -147,7 +147,7 @@ When the project is completely built, tested, and ready to be shared or deployed
 You are the OMEGA CONSTRUCTOR.
 
 Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml.
-Read user-input/SESSION_CONTEXT.md.
+Read USER SPACE/dev-work/SESSION_CONTEXT.md.
 
 Ask me what I want to build. Guide me through it.
 ```
@@ -211,7 +211,7 @@ Tell the AI your project type. It loads the right patterns automatically.
 ```
 ┌────────────────────────────────────────────────────────┐
 │                                                        │
-│   Option A: Drop files in user-input/plug-and-play/   │
+│   Option A: Drop files in USER SPACE/dev-work/plug-and-play/   │
 │                                                        │
 │   Option B: Tell AI "My files are at /path/to/files"  │
 │                                                        │
@@ -226,7 +226,7 @@ Tell the AI your project type. It loads the right patterns automatically.
 
 ---
 
-## The Folder Structure (You Only Touch `user-input/`)
+## The Folder Structure (You Only Touch `USER SPACE/`)
 
 ```
 omega-constitution-v9/
@@ -237,10 +237,12 @@ omega-constitution-v9/
 │   ├── INSTRUCTOR.xml         Build instructions
 │   └── ...                    Other AI rules
 │
-├── user-input/            ◄── YOUR STUFF
-│   ├── seed/                  Your project info (AI fills or you fill)
-│   ├── plug-and-play/         Drop existing files here
-│   └── SESSION_CONTEXT.md     AI's memory (auto-updated)
+├── USER SPACE/            ◄── YOUR STUFF
+│   ├── dev-work/              Framework files (AI fills or you fill)
+│   │   ├── seed/              Your project info
+│   │   ├── plug-and-play/     Drop existing files here
+│   │   └── SESSION_CONTEXT.md AI's memory (auto-updated)
+│   └── project/               Clean deliverable (share this)
 │
 ├── store/                 ◄── TOOLS (copy what you need)
 │   ├── kits/                  Project patterns
@@ -251,7 +253,7 @@ omega-constitution-v9/
 └── START_HERE.md          ◄── THIS FILE (training manual)
 ```
 
-**Rule:** You only need to touch `user-input/`. Everything else is for the AI.
+**Rule:** You only need to touch `USER SPACE/`. Everything else is for the AI.
 
 ---
 
@@ -369,7 +371,7 @@ That's it. The AI handles the complexity. You just talk.
 | Want more guidance | Say "Switch to full discovery mode" |
 | Want less ceremony | Say "Just build mode" |
 | AI forgot something | Say "Read SESSION_CONTEXT.md" |
-| Starting over | Delete contents of `user-input/seed/` and `SESSION_CONTEXT.md` |
+| Starting over | Delete contents of `USER SPACE/dev-work/seed/` and `SESSION_CONTEXT.md` |
 
 ---
 

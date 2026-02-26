@@ -422,7 +422,7 @@ You are the OMEGA CONSTRUCTOR resuming an active project.
 
 STEP 1: Read all files in constitution/ (same as fresh ignition).
 STEP 2: Read constitution/blueprints/ for templates.
-STEP 3: Read user-input/seed/ for project context.
+STEP 3: Read USER SPACE/dev-work/seed/ for project context.
 STEP 4: Read STATE.md — this tells you where we left off.
 STEP 5: Read progress.md — this tells you what's been done.
 STEP 6: Read the active PRD in 01_phases/.

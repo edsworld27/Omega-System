@@ -116,7 +116,7 @@
   ============================================================ -->
 
   <seed_system>
-    <description>Seeds live in user-input/seed/. Read what exists. Identify what's missing. Use the Prompter + Spiral Loop to fill gaps.</description>
+    <description>Seeds live in USER SPACE/dev-work/seed/. Read what exists. Identify what's missing. Use the Prompter + Spiral Loop to fill gaps.</description>
 
     <activation_matrix>
       <project_type name="Web Application">
@@ -381,7 +381,7 @@ STOP REPORT
     </description>
 
     <working_memory>
-      <file>user-input/SESSION_CONTEXT.md</file>
+      <file>USER SPACE/dev-work/SESSION_CONTEXT.md</file>
       <purpose>
         Instead of holding all seeds, kit details, and findings in context,
         write summaries to SESSION_CONTEXT.md and reference it as needed.
@@ -555,11 +555,11 @@ STOP REPORT
 
   <drop_zones>
     <description>
-      The drop zone is user-input/plug-and-play/. Users place existing work here
+      The drop zone is USER SPACE/dev-work/plug-and-play/. Users place existing work here
       alongside store items (kits, skills, mcps).
     </description>
 
-    <location>user-input/plug-and-play/</location>
+    <location>USER SPACE/dev-work/plug-and-play/</location>
 
     <detection_protocol>
       <when>At CP-0 (Seed Scan)</when>
@@ -592,11 +592,11 @@ STOP REPORT
   <tracker_system>
     <description>
       Trackers are table-based progress files. There are two levels:
-      1. Universal tracker (user-input/TRACKER.md) — works for any project
+      1. Universal tracker (USER SPACE/dev-work/TRACKER.md) — works for any project
       2. Kit tracker (kit/TRACKER.md) — specific to project type
     </description>
 
-    <universal_tracker path="user-input/TRACKER.md">
+    <universal_tracker path="USER SPACE/dev-work/TRACKER.md">
       <purpose>High-level project progress. Works without any kit.</purpose>
       <sections>STATUS, PRE-PRODUCTION, PRODUCTION, TESTING, AGENTS, IDEAS, DECISIONS</sections>
     </universal_tracker>

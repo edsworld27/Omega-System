@@ -13,7 +13,7 @@ RESUME SEQUENCE:
 
 1. Read constitution/ — all XML files
 2. Read constitution/blueprints/
-3. Read user-input/seed/
+3. Read USER SPACE/dev-work/seed/
 4. Read STATE.md — this tells you where we left off
 5. Read progress.md — what's been done
 6. Read the active PRD

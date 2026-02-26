@@ -44,7 +44,7 @@
 ## 8. AI / Automation (If applicable)
 - **AI Provider:** (e.g., Anthropic / OpenAI / Local models)
 - **Orchestration:** (e.g., n8n / LangChain / Custom)
-- **MCP Servers:** (See `store/mcps/MCP_CONFIG.md` or your `user-input/plug-and-play/mcps/`)
+- **MCP Servers:** (See `store/mcps/MCP_CONFIG.md` or your `USER SPACE/dev-work/plug-and-play/mcps/`)
 
 ## 9. Development Tools
 - **Package Manager:** (e.g., pnpm / npm / yarn)

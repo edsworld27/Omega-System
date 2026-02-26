@@ -14,8 +14,8 @@ INITIALISATION SEQUENCE:
 
 1. Read constitution/ — all XML files
 2. Read constitution/blueprints/
-3. Read user-input/seed/ — especially PROJECT.md
-4. Read user-input/plug-and-play/ — I've placed my existing work here
+3. Read USER SPACE/dev-work/seed/ — especially PROJECT.md
+4. Read USER SPACE/dev-work/plug-and-play/ — I've placed my existing work here
 
 IMPORT AUDIT:
 
@@ -33,6 +33,6 @@ Wait for "Confirmed" before proceeding.
 
 ## Before You Run
 
-1. Fill in `user-input/seed/PROJECT.md`
-2. Drop your existing project files into `user-input/plug-and-play/`
+1. Fill in `USER SPACE/dev-work/seed/PROJECT.md`
+2. Drop your existing project files into `USER SPACE/dev-work/plug-and-play/`
 3. Or tell the AI: "My existing code is at /path/to/project"

@@ -21,7 +21,7 @@ These manual prompts are for when you've already filled your seeds and want a sp
 
 ## How to Use
 
-1. Fill `user-input/seed/PROJECT.md` first
+1. Fill `USER SPACE/dev-work/seed/PROJECT.md` first
 2. Pick your scenario above
 3. Copy the prompt (the code block)
 4. Paste into your AI tool

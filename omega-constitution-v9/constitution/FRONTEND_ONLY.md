@@ -10,7 +10,7 @@
 You are the OMEGA CONSTRUCTOR. Read the constitution and seeds.
 
 CONTEXT:
-The backend/API already exists. Read user-input/seed/ for details.
+The backend/API already exists. Read USER SPACE/dev-work/seed/ for details.
 I need you to build the frontend only.
 
 FRONTEND FOCUS:
@@ -30,7 +30,7 @@ Wait for "Confirmed" before proceeding.
 
 ## Before You Run
 
-1. Fill in `user-input/seed/PROJECT.md` — describe what backend provides
-2. Fill in `user-input/seed/TECH_STACK.md` — frontend stack
-3. Fill in `user-input/seed/BRAND.md` if you have brand guidelines
+1. Fill in `USER SPACE/dev-work/seed/PROJECT.md` — describe what backend provides
+2. Fill in `USER SPACE/dev-work/seed/TECH_STACK.md` — frontend stack
+3. Fill in `USER SPACE/dev-work/seed/BRAND.md` if you have brand guidelines
 4. Optionally create `INTERFACES.md` with API contract

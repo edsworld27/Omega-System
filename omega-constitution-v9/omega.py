@@ -15,6 +15,7 @@ USER_SPACE = os.path.join(SCRIPT_DIR, "USER SPACE")
 DEV_WORK = os.path.join(USER_SPACE, "dev-work")
 PROJECT = os.path.join(USER_SPACE, "project")
 SEED_DIR = os.path.join(DEV_WORK, "seed")
+LOGGING_DIR = os.path.join(USER_SPACE, "logging")
 PLUG_AND_PLAY = os.path.join(DEV_WORK, "plug-and-play")
 
 
@@ -56,6 +57,7 @@ def setup_folders():
         os.path.join(PROJECT, "src"),
         os.path.join(PROJECT, "tests"),
         os.path.join(PROJECT, "public"),
+        LOGGING_DIR,
         os.path.join(PLUG_AND_PLAY, "frontend"),
         os.path.join(PLUG_AND_PLAY, "backend"),
         os.path.join(PLUG_AND_PLAY, "existing"),

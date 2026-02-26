@@ -256,6 +256,11 @@
     <phase letter="B" name="PRODUCTION">
       <purpose>Build. Execute B.L.A.S.T. Write code.</purpose>
 
+      <directory_enforcement>
+        <rule>All application source code, configuration files, package setups, and tests MUST be written exclusively inside the USER SPACE/project/ directory.</rule>
+        <rule>The USER SPACE/dev-work/ directory is STRICTLY for AI planning, documentation, seeds, and tracking. NO source code goes there.</rule>
+      </directory_enforcement>
+
       <spiral>BLUEPRINT -> LINK -> ARCHITECT (SOP first) -> CODE -> TEST -> [PASS: STYLIZE -> TEST -> PASS] or [FAIL: REPAIR -> RETEST]</spiral>
 
       <blast_loop name="B.L.A.S.T.">

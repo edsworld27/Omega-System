@@ -13,7 +13,8 @@ WATCHERS = [
     os.path.join(PYTHON_LIB_DIR, "auto_changelog.py"),
     os.path.join(PYTHON_LIB_DIR, "auto_security.py"),
     os.path.join(PYTHON_LIB_DIR, "auto_structure.py"),
-    os.path.join(PYTHON_LIB_DIR, "auto_help.py")
+    os.path.join(PYTHON_LIB_DIR, "auto_help.py"),
+    os.path.join(PYTHON_LIB_DIR, "omega_reporter.py")
 ]
 
 def main():

@@ -4,6 +4,27 @@
 
 ---
 
+## v9.5 — 2026-02-26
+
+### Context Offloading & Daemon Automation
+- Added `omega_reporter.py` script to run in background daemon
+- Daemon aggressively scans `project/` for structural violations
+- Violations are logged to a lightweight `USER SPACE/logging/` folder
+- Drastically reduces XML token overhead for autonomous IDE agents
+- `omega.py` wizard now automatically scaffolds `logging/`
+
+### IDE Agent Routing
+- Added explicit `<directory_enforcement>` to `INSTRUCTOR.xml`
+- AI must now write production code exclusively into `USER SPACE/project/`
+- Added `.cursorrules` to root, binding native IDE agents (Cursor/Antigravity) to the Constitution
+
+### Constitution Bot Ideation
+- Replaced `future-kits/` with `ideation/CONSTITUTION_BOT.md`
+- Added vision for remote Telegram orchestration
+- Moved bot backend secrets to `ideation/resource/` and added to `.gitignore`
+
+---
+
 ## v9.4 — 2026-02-26
 
 ### Structured Onboarding Flow

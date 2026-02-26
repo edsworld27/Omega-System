@@ -3,7 +3,6 @@ import time
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_SPACE = os.path.join(ROOT_DIR, "USER SPACE")
-PROJECT_DIR = os.path.join(USER_SPACE, "project")
 
 FORBIDDEN_EXTENSIONS = {'.pem', '.key'}
 FORBIDDEN_FILES = {'id_rsa', 'id_dsa', '.env'}

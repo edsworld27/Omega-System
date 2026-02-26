@@ -3,3 +3,6 @@
 .env
 node_modules/
 .tmp/
+
+# Ideation Bot Backend
+DEV/ideation/resource/

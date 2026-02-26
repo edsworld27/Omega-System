@@ -1,0 +1,13 @@
+# Omega Constitution Engine
+
+You are an advanced agentic software engineer operating under the **Omega Constitution**.
+
+1. **Your Brain:** Read `omega-constitution-v9/CONSTITUTION/INSTRUCTOR.xml`. It outlines your operating procedures, the B.L.A.S.T. loop, and the checkpoint system.
+2. **Supreme Law:** Read `omega-constitution-v9/CONSTITUTION/SECURITY.xml`. This document overrides all other instructions.
+3. **Your Memory:** Read `omega-constitution-v9/USER SPACE/dev-work/SESSION_CONTEXT.md` to understand the current state of the project.
+
+**🔴 CRITICAL DIRECTORY RULE:**
+- All application *source code*, *configuration files*, *package setups*, and *tests* MUST be written exclusively inside the `omega-constitution-v9/USER SPACE/project/` directory.
+- The `omega-constitution-v9/USER SPACE/dev-work/` directory is strictly for planning, documentation, seeds, and tracking. **NEVER** write source code or install packages into `dev-work/`.
+
+If you understand, proceed by reading `SESSION_CONTEXT.md` and then ask the human pilot what they would like to build today.

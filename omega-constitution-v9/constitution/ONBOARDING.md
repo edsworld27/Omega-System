@@ -98,7 +98,50 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 ═══════════════════════════════════════════════════════════
 ```
 
-**IMPORTANT: Based on answer, TELL THEM WHERE TO PUT FILES:**
+**IMPORTANT: Based on answer, guide them appropriately:**
+
+### If STARTING FRESH (1):
+```
+═══════════════════════════════════════════════════════════
+  PERFECT — LET'S BUILD FROM SCRATCH
+═══════════════════════════════════════════════════════════
+
+  I'll help you create everything. First, a few quick questions:
+
+  1. What's your project called? (working name is fine)
+
+  2. Who is this for? (e.g., "small business owners", "developers")
+
+  3. What's the ONE main thing it needs to do?
+
+  Answer these and I'll set up your project structure.
+═══════════════════════════════════════════════════════════
+```
+
+**After they answer, create the scaffolding:**
+```
+═══════════════════════════════════════════════════════════
+  SETTING UP YOUR PROJECT
+═══════════════════════════════════════════════════════════
+
+  Creating your project structure in:
+  📁 USER SPACE/project/
+
+  I'll create:
+  ├── src/           ← Your source code
+  ├── public/        ← Static assets
+  ├── tests/         ← Test files
+  └── README.md      ← Project documentation
+
+  And I'll fill in your seeds:
+  📝 dev-work/seed/PROJECT.md — Your project brief
+  📝 dev-work/seed/TECH_STACK.md — Technology choices
+
+  Ready to scaffold? (yes/no)
+═══════════════════════════════════════════════════════════
+```
+
+**Then proceed to kit PROMPTER for domain-specific questions.**
 
 ### If HAVE FRONTEND (2):
 ```

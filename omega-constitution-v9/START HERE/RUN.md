@@ -28,7 +28,7 @@ Follow ONBOARDING.md exactly. Ask these in order, ONE AT A TIME:
    - Website / Web App / API / Automation / Other
 
 4. EXISTING WORK: "Do you have existing work?"
-   - Starting fresh
+   - Starting fresh → Help them scaffold: ask name, audience, main feature, then create structure
    - Have frontend → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/frontend/"
    - Have backend → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/backend/"
    - Have both → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/existing/"

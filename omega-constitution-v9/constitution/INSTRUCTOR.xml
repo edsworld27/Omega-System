@@ -159,11 +159,15 @@
 
     <kit_auto_activation>
       <description>
-        When reading user-input/plug-and-play/kits/, check each kit folder for kit.config.md.
-        This file tells you: WHEN the kit activates (based on Project Type), WHAT the kit provides,
-        and OVERRIDE rules (which files win on conflict).
+        Kits auto-activate based on project type. No manual registration needed.
+        Just drop a kit folder into store/kits/ with the correct structure.
       </description>
-      <rule>If the project type matches a kit's activation trigger, load that kit's pattern file automatically.</rule>
+      <trigger>
+        <step order="1">AI reads PROJECT.md or asks "What type of project?"</step>
+        <step order="2">AI scans store/kits/ for all folders with kit.config.md</step>
+        <step order="3">AI matches project type to kit activation triggers</step>
+        <step order="4">Matching kit(s) auto-load — PROMPTER.md takes over discovery</step>
+      </trigger>
       <prompter_handoff>
         When a kit activates, its PROMPTER.md takes over discovery:
         1. PROMPTER.md contains the requirements table for that project type
@@ -172,6 +176,10 @@
         4. PROMPTER uses constitution methods (PROMPTING.xml) but applies them to the kit domain
         5. Build only begins when PROMPTER's requirements table is complete
       </prompter_handoff>
+      <developer_note>
+        To add a new kit: Create folder in store/kits/, add kit.config.md + PROMPTER.md + [NAME]_KIT.md.
+        See store/kits/KIT_CREATION_GUIDE.md for full instructions.
+      </developer_note>
     </kit_auto_activation>
   </seed_system>
 
@@ -443,10 +451,23 @@ STOP REPORT
 
   <kit_assembly_system>
     <description>
-      Kits are not just patterns — they are complete assembly lines with phases,
-      task files, trackers, and drop zones. Each kit guides the user through
-      preproduction, production, and testing specific to that project type.
+      Kits are plug-and-play modules. Developers create kits following the framework,
+      drop them into store/kits/, and they auto-activate based on project type.
+      No manual registration required — just follow the structure.
     </description>
+
+    <auto_discovery>
+      <location>store/kits/</location>
+      <protocol>
+        <step order="1">At session start, scan store/kits/ for all folders</step>
+        <step order="2">Each folder with kit.config.md is a valid kit</step>
+        <step order="3">Read kit.config.md to get activation trigger (project type)</step>
+        <step order="4">When user's project type matches, auto-load that kit</step>
+        <step order="5">Multiple kits can activate if project is hybrid</step>
+      </protocol>
+      <rule>No index file needed — folder structure IS the registry</rule>
+      <rule>New kits work immediately when dropped in — zero config</rule>
+    </auto_discovery>
 
     <kit_structure>
       <file name="PROMPTER.md">

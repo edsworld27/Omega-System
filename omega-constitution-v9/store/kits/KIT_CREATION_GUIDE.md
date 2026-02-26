@@ -4,23 +4,39 @@
 
 ---
 
+## Plug-and-Play Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   1. Create your kit folder                                 │
+│   2. Add required files (PROMPTER, config, patterns)        │
+│   3. Drop into store/kits/                                  │
+│   4. Done. It auto-activates when project type matches.     │
+│                                                             │
+│   NO registration. NO index file. NO manual config.         │
+│   The folder structure IS the registry.                     │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## What is a Kit?
 
-A kit is a specialized package that teaches the AI how to build a specific type of project. It contains:
-- **Requirements** — What must be gathered before building
-- **Patterns** — Templates, checklists, best practices
-- **Tasks** — Phase-by-phase work items
-- **Rules** — Kit-specific constraints
+A kit is a specialized module that teaches the AI how to build a specific type of project.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                      CONSTITUTION                       │
 │              (Security, Quality, Prompting)             │
+│                    [Foundation]                         │
 └───────────────────────────┬─────────────────────────────┘
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────┐
 │                         KIT                             │
+│                   [Your Module]                         │
 │                                                         │
 │   PROMPTER.md      "What to ask"                        │
 │   kit.config.md    "When to activate"                   │
@@ -35,6 +51,12 @@ A kit is a specialized package that teaches the AI how to build a specific type 
 │              (Seeds, Content, Constraints)              │
 └─────────────────────────────────────────────────────────┘
 ```
+
+**Kits contain:**
+- **Requirements** — What must be gathered before building
+- **Patterns** — Templates, checklists, best practices
+- **Tasks** — Phase-by-phase work items
+- **Rules** — Kit-specific constraints
 
 ---
 
@@ -398,22 +420,25 @@ The evaluation matrix maps kit checklist items to verification status.
 
 ---
 
-## Step 7: Register Your Kit
+## Step 7: Drop It In
 
-Add your kit to the kit index so the AI knows it exists.
+**No registration needed.** Just place your kit folder in `store/kits/`.
 
-### In store/kits/README.md (or similar index)
-
-```markdown
-## Available Kits
-
-| Kit | Folder | Activates On |
-|:----|:-------|:-------------|
-| Website | `website/` | Project Type = Website |
-| SaaS | `saas/` | Project Type = SaaS |
-| API | `api/` | Project Type = API |
-| **[Your Kit]** | `your-kit/` | Project Type = [Your Type] |
 ```
+store/kits/
+├── website/           ← Existing kit
+├── saas/              ← Existing kit
+├── api/               ← Existing kit
+└── your-new-kit/      ← Drop yours here. Done.
+```
+
+**How auto-discovery works:**
+1. AI scans `store/kits/` at session start
+2. Any folder with `kit.config.md` is a valid kit
+3. AI reads activation trigger from `kit.config.md`
+4. When project type matches, kit auto-loads
+
+**That's it.** The folder structure is the registry.
 
 ---
 
@@ -486,12 +511,70 @@ Study these for reference:
 
 ## Publishing Your Kit
 
-1. Place in `store/kits/your-kit/`
-2. Add to kit index
+### For Personal Use
+```
+1. Create kit folder with required files
+2. Drop into store/kits/
 3. Test with fresh session
-4. Document in kit README.md
-5. Submit PR (if contributing to main repo)
+4. Done — it works immediately
+```
+
+### For Community Contribution
+```
+1. Create kit folder with required files
+2. Test thoroughly (all 4 test types)
+3. Add README.md with usage examples
+4. Submit PR to main repo
+5. Community reviews and merges
+```
+
+### Sharing Your Kit
+
+Kits are portable. To share:
+```
+1. Zip your kit folder
+2. Send to recipient
+3. They unzip into their store/kits/
+4. It works. No config needed.
+```
 
 ---
 
-*Kits extend the constitution. They don't replace it.*
+## Architecture Summary
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                       FOUNDATION                            │
+│                    (Omega provides)                         │
+├─────────────────────────────────────────────────────────────┤
+│   constitution/     Laws, security, quality                 │
+│   user-input/       Seeds, working memory                   │
+│   store/kits/       ← KITS PLUG IN HERE                     │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      YOUR KIT                               │
+│                   (You provide)                             │
+├─────────────────────────────────────────────────────────────┤
+│   PROMPTER.md      Discovery engine                         │
+│   kit.config.md    Activation trigger                       │
+│   [NAME]_KIT.md    Patterns + checklists                    │
+│   phases/          Optional task folders                    │
+└─────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    AUTO-ACTIVATION                          │
+├─────────────────────────────────────────────────────────────┤
+│   User says "I'm building a [type]"                         │
+│   AI scans store/kits/ for matching kit.config.md           │
+│   Kit loads automatically                                   │
+│   PROMPTER takes over discovery                             │
+│   Build begins when requirements complete                   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+*Kits extend the constitution. They don't replace it. Build once, share everywhere.*

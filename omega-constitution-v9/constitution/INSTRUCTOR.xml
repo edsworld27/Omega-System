@@ -439,10 +439,11 @@ STOP REPORT
       </parallel_orchestration>
 
       <protocol>
-        <step order="1">At session start, read SESSION_CONTEXT.md first</step>
-        <step order="2">If empty or stale, scan seeds and write findings to it</step>
-        <step order="3">Update SESSION_CONTEXT.md after each significant action</step>
-        <step order="4">Reference SESSION_CONTEXT.md instead of re-reading full files</step>
+        <step order="1">At session start, check for USER SPACE/dev-work/PICKUP_ALERT.md. If it exists, Telegram has dispatched new Founder Jobs. Read the alert and begin Hive orchestration immediately.</step>
+        <step order="2">Read SESSION_CONTEXT.md first</step>
+        <step order="3">If empty or stale, scan seeds and write findings to it</step>
+        <step order="4">Update SESSION_CONTEXT.md after each significant action</step>
+        <step order="5">Reference SESSION_CONTEXT.md instead of re-reading full files</step>
         <step order="5">Only read full files when you need specific details not in the summary</step>
       </protocol>
 

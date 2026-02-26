@@ -1,8 +1,8 @@
 # Constitution Bot — Ideation
 
-**Status**: Concept
-**Priority**: Future
-**Resource**: [mac-commander](resource/mac-commander/)
+**Status**: MVP Complete
+**Priority**: Active
+**Resource**: [omega-bot](resource/omega-bot/)
 
 ---
 
@@ -268,12 +268,9 @@ Bot: "🤖 Autonomous mode enabled.
 
 ## Resource
 
-The mac-commander codebase in [resource/mac-commander/](resource/mac-commander/) contains:
+The omega-bot codebase in [resource/omega-bot/](resource/omega-bot/) contains:
 
-- Working Telegram bot with authorization
-- Multi-agent orchestration system
-- Risk assessment and passkey protection
-- Job file management (AntigravityAgent)
-- Monitoring and audit logging
-
-This provides the foundation for the Constitution Bot.
+- Lean Telegram bot with authorization
+- 3-agent MVP: IntentAgent, ConstitutionAgent, ReporterAgent
+- Omega Hive integration (FOUNDER_JOB drops)
+- Zero legacy bloat — stripped from the old mac-commander

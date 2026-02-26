@@ -14,7 +14,8 @@ WATCHERS = [
     os.path.join(PYTHON_LIB_DIR, "auto_security.py"),
     os.path.join(PYTHON_LIB_DIR, "auto_structure.py"),
     os.path.join(PYTHON_LIB_DIR, "auto_help.py"),
-    os.path.join(PYTHON_LIB_DIR, "omega_reporter.py")
+    os.path.join(PYTHON_LIB_DIR, "omega_reporter.py"),
+    os.path.join(PYTHON_LIB_DIR, "omega_job_watcher.py")
 ]
 
 def main():

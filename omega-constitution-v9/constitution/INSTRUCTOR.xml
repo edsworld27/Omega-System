@@ -197,7 +197,15 @@
       <spiral>SEED SCAN -> GAP ANALYSIS -> QUESTION -> FILL -> CONFIRM -> ENVIRONMENT -> PRD GENERATION -> REVIEW -> SOP GENERATION -> REVIEW</spiral>
 
       <checkpoints>
-        <checkpoint id="CP-0" name="SEED SCAN">Read all files. Report what exists, what's missing, what's incomplete.</checkpoint>
+        <checkpoint id="CP-ONBOARD" name="ONBOARDING" mandatory="true">
+          BEFORE ANYTHING ELSE: Follow ONBOARDING.md exactly.
+          Step 1: Mode Selection (Full/Quick/Lite/Just Build)
+          Step 2: Project Type (Website/App/API/Automation/Other)
+          Step 3: Existing Work Detection (Fresh/Have Frontend/Have Backend/Both/Designs)
+          Step 4: Quick Context (1-2 sentence purpose)
+          NO DEVIATION. ONE QUESTION AT A TIME. WAIT FOR ANSWERS.
+        </checkpoint>
+        <checkpoint id="CP-0" name="SEED SCAN">After onboarding, read all files. Report what exists, what's missing, what's incomplete.</checkpoint>
         <checkpoint id="CP-1" name="INITIALISATION">Summarise understanding. Ask questions for gaps. Propose phases if none exist.</checkpoint>
         <checkpoint id="CP-2" name="ENVIRONMENT">Generate folder tree from STRUCTURE.xml. Present structure.</checkpoint>
         <checkpoint id="CP-3" name="PRD REVIEW">Generate PRD using blueprints/PRD.md + Prompter. Present for approval.</checkpoint>

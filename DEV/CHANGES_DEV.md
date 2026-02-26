@@ -19,6 +19,26 @@
 - Securely drops `FOUNDER_JOB-[ID].md` into `dev-work/hive/telegram_inbox/` for Claude Code to execute.
 - Wired natural language triggers into `SimpleBrain` pattern matcher.
 
+### Recursive Rule of 3 Hierarchy (v9.7)
+- Replaced the "Rule of 5" with the **Rule of 3** across the entire framework.
+- Hierarchy is now infinitely recursive: 3 Workers → 1 Manager → 3 Managers → 1 Mega-Manager → ...
+- Updated `MASTER_ORCHESTRATOR.md` with recursive spawn and merge protocols.
+- Updated `ConstitutionAgent` to instruct Claude Code to use Rule of 3 in FOUNDER_JOBs.
+
+### Omega Bot MVP (v9.8)
+- Stripped the bloated `mac-commander` (30+ files, 8 agents) into the lean `omega-bot/` (9 files, 2 agents).
+- New architecture: **IntentAgent** (keyword classifier) → **Orchestrator** (router) → **ConstitutionAgent** + **ReporterAgent**.
+- Zero LLM dependencies — runs free, no API costs.
+- Added `omega_job_watcher.py` daemon to detect new `FOUNDER_JOB` files from Telegram.
+- Daemon writes `PICKUP_ALERT.md` to `dev-work/` for Claude Code to detect on session start.
+- Updated `INSTRUCTOR.xml` protocol: Step 1 is now "Check for PICKUP_ALERT.md".
+- Updated `CONSTITUTION_BOT.md` ideation doc to point to `omega-bot/`.
+
+### Omega Claw (Next — In Planning)
+- Planning to rebrand `omega-bot/` → `omega-claw/` as the canonical agentic orchestration engine.
+- Will add SQLite for job history tracking.
+- Architecture finalized: LLM-free, file-based job drops, Constitution-governed.
+
 ### Mode-Based Checkpoint Autonomy
 - Updated `INSTRUCTOR.xml` Prime Directives
 - Added explicit `<checkpoint_autonomy>` block

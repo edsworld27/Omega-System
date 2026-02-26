@@ -40,12 +40,12 @@
 - Architecture finalized: LLM-free, file-based job drops, Constitution-governed.
 
 ### Omega Claw Standalone (v9.9)
-- Created standalone `omega-claw` repo at `~/Documents/omega-claw/`.
+- Created standalone `omega-claw` repo: **https://github.com/edsworld27/omega-claw**
 - Full codebase: 20 files, 765 lines — OrchestratorAgent, ReporterAgent, IntentAgent, SQLite, Telegram.
 - Added `skills/_template/` — plug-and-play skill system with auto-loadable `skill.json` + `handler.py`.
 - Added `mcps/` — plug-and-play MCP config system for wiring external services.
-- Updated Constitution README to reference omega-claw repo.
-- Ready for GitHub push once `edsworld27/omega-claw` repo is created.
+- Updated Constitution README + SESSION_CONTEXT.md to reference omega-claw repo.
+- Pushed to GitHub and live.
 
 ### Mode-Based Checkpoint Autonomy
 - Updated `INSTRUCTOR.xml` Prime Directives

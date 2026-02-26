@@ -6,25 +6,44 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 
 ---
 
-## STEP 1: Mode Selection (ALWAYS FIRST)
+## STEP 1: Intent Detection (ALWAYS FIRST)
 
 ```
 ═══════════════════════════════════════════════════════════
-  OMEGA CONSTRUCTOR — SELECT MODE
+  OMEGA CONSTRUCTOR — WHAT DO YOU NEED?
 ═══════════════════════════════════════════════════════════
 
-  How would you like to work?
+  1. BUILD SOMETHING — I want to create a project
+  2. LEARN FIRST — I want to understand how this works
+  3. GET HELP — I have a question about the system
 
-  1. FULL DISCOVERY — I'll guide you through everything
+  Reply with: 1, 2, or 3
+═══════════════════════════════════════════════════════════
+```
+
+**If LEARN FIRST (2):** Jump to LEARNING PATH below.
+**If GET HELP (3):** Jump to HELP PATH below.
+**If BUILD (1):** Continue to Step 2.
+
+---
+
+## STEP 2: Mode Selection (If building)
+
+```
+═══════════════════════════════════════════════════════════
+  HOW WOULD YOU LIKE TO WORK?
+═══════════════════════════════════════════════════════════
+
+  1. FULL DISCOVERY — Guide me through everything
      (Best for: new projects, exploring ideas)
 
-  2. QUICK START — You already filled the seed files
+  2. QUICK START — I already filled the seed files
      (Best for: pre-planned projects)
 
   3. LITE MODE — Minimal questions, simple build
      (Best for: small models, quick prototypes)
 
-  4. JUST BUILD — Skip to code, you know what you want
+  4. JUST BUILD — Skip to code, I know what I want
      (Best for: experienced users, clear specs)
 
   Reply with: 1, 2, 3, or 4
@@ -35,7 +54,7 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 
 ---
 
-## STEP 2: Project Type (After mode selected)
+## STEP 3: Project Type (Triggers kit activation)
 
 ```
 ═══════════════════════════════════════════════════════════
@@ -52,13 +71,13 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 ═══════════════════════════════════════════════════════════
 ```
 
-**This triggers kit activation.** A=website kit, B=saas kit, C=api kit, D=automation kit.
+**Kit activation:** A=website, B=saas, C=api, D=automation
 
 **WAIT for answer before proceeding.**
 
 ---
 
-## STEP 3: Existing Work Detection (Critical)
+## STEP 4: Existing Work Detection (Critical)
 
 ```
 ═══════════════════════════════════════════════════════════
@@ -79,18 +98,86 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 ═══════════════════════════════════════════════════════════
 ```
 
-**Based on answer:**
-- 1 → Fresh build flow
-- 2 → Load FRONTEND_ONLY.md context
-- 3 → Load BACKEND_ONLY.md context
-- 4 → Load IMPORT_PROJECT.md context
-- 5 → Fresh build with design assets
+**IMPORTANT: Based on answer, TELL THEM WHERE TO PUT FILES:**
 
-**WAIT for answer before proceeding.**
+### If HAVE FRONTEND (2):
+```
+═══════════════════════════════════════════════════════════
+  GOT IT — YOU HAVE FRONTEND CODE
+═══════════════════════════════════════════════════════════
+
+  Please put your frontend files here:
+
+  📁 USER SPACE/dev-work/plug-and-play/frontend/
+
+  Drop your entire frontend folder there, or tell me:
+  "My frontend is at /path/to/folder"
+
+  What framework is your frontend? (React, Vue, etc.)
+═══════════════════════════════════════════════════════════
+```
+
+### If HAVE BACKEND (3):
+```
+═══════════════════════════════════════════════════════════
+  GOT IT — YOU HAVE BACKEND/API
+═══════════════════════════════════════════════════════════
+
+  Please put your backend files here:
+
+  📁 USER SPACE/dev-work/plug-and-play/backend/
+
+  Drop your backend folder there, or tell me:
+  "My backend is at /path/to/folder"
+
+  Do you have API documentation or an INTERFACES.md?
+═══════════════════════════════════════════════════════════
+```
+
+### If HAVE BOTH (4):
+```
+═══════════════════════════════════════════════════════════
+  GOT IT — YOU HAVE AN EXISTING PROJECT
+═══════════════════════════════════════════════════════════
+
+  Please put your project files here:
+
+  📁 USER SPACE/dev-work/plug-and-play/existing/
+
+  Drop your project folder there, or tell me:
+  "My project is at /path/to/folder"
+
+  What do you need help with?
+  - Bug fixes
+  - New features
+  - Refactoring
+  - Testing
+  - Something else
+═══════════════════════════════════════════════════════════
+```
+
+### If HAVE DESIGNS (5):
+```
+═══════════════════════════════════════════════════════════
+  GOT IT — YOU HAVE DESIGNS
+═══════════════════════════════════════════════════════════
+
+  Please put your design files here:
+
+  📁 USER SPACE/dev-work/plug-and-play/designs/
+
+  Accepted formats:
+  - Figma links (paste the URL)
+  - Images (PNG, JPG, PDF)
+  - Wireframe sketches
+
+  Drop them there and let me know when ready.
+═══════════════════════════════════════════════════════════
+```
 
 ---
 
-## STEP 4: Quick Context Gather
+## STEP 5: Quick Context
 
 ```
 ═══════════════════════════════════════════════════════════
@@ -106,27 +193,24 @@ The AI MUST follow this exact sequence. No skipping. No deviation.
 ═══════════════════════════════════════════════════════════
 ```
 
-**WAIT for answer before proceeding.**
-
 ---
 
-## STEP 5: Handoff to Kit PROMPTER
-
-After Steps 1-4, the activated kit's PROMPTER.md takes over with domain-specific questions.
+## STEP 6: Confirm & Handoff
 
 ```
 ═══════════════════════════════════════════════════════════
-  GOT IT. HERE'S WHAT I KNOW:
+  HERE'S WHAT I KNOW
 ═══════════════════════════════════════════════════════════
 
   Mode: [Full Discovery / Quick Start / Lite / Just Build]
   Type: [Website / Web App / API / Automation / Other]
   Starting Point: [Fresh / Have Frontend / Have Backend / etc.]
+  Existing Files: [Location if provided]
   Purpose: [Their 1-2 sentence description]
 
   Kit Activated: [website / saas / api / automation / none]
 
-  Now I'll ask specific questions for your project type.
+  Is this correct? (yes/no)
 ═══════════════════════════════════════════════════════════
 ```
 
@@ -134,48 +218,90 @@ Then proceed to kit's PROMPTER.md questions.
 
 ---
 
-## Mode-Specific Behavior
+## LEARNING PATH (If they chose "Learn First")
 
-### If FULL DISCOVERY (Mode 1)
-- Ask all questions from kit PROMPTER
-- Fill seeds as user answers
-- Validate completeness before building
+```
+═══════════════════════════════════════════════════════════
+  OMEGA CONSTITUTION — LEARNING MODE
+═══════════════════════════════════════════════════════════
 
-### If QUICK START (Mode 2)
-- Read existing seeds
-- Only ask about blanks/placeholders
-- Validate and confirm understanding
+  What would you like to understand?
 
-### If LITE MODE (Mode 3)
-- Ask only: What? Tech stack? First feature?
-- Skip detailed discovery
-- Build incrementally
+  1. HOW IT WORKS — The overall system and flow
+  2. THE STRUCTURE — Folders and what goes where
+  3. KITS — What they are and how they help
+  4. MODES — Full/Quick/Lite/Just Build explained
+  5. SECURITY — How the system keeps things safe
+  6. EVERYTHING — Give me the full tour
 
-### If JUST BUILD (Mode 4)
-- Skip to: "What do you want me to build first?"
-- Minimal questions, maximum action
-- Still follow security rules
+  Reply with: 1, 2, 3, 4, 5, or 6
+═══════════════════════════════════════════════════════════
+```
+
+**Based on answer, explain that topic clearly, then ask:**
+"Ready to build something, or want to learn more?"
+
+---
+
+## HELP PATH (If they chose "Get Help")
+
+```
+═══════════════════════════════════════════════════════════
+  OMEGA CONSTRUCTOR — HELP MODE
+═══════════════════════════════════════════════════════════
+
+  What do you need help with?
+
+  Just ask your question and I'll answer it.
+
+  Common questions:
+  - "Where do I put my files?"
+  - "How do I start a new project?"
+  - "What's a kit?"
+  - "How do I resume a previous session?"
+  - "What if I have existing code?"
+
+═══════════════════════════════════════════════════════════
+```
+
+**Answer their question, then ask:**
+"Anything else, or ready to build?"
 
 ---
 
 ## Rules
 
-1. **Never skip Step 1** — Mode selection is mandatory
-2. **Never skip Step 3** — Existing work detection prevents wasted effort
-3. **Always confirm understanding** — Show summary before building
-4. **One question at a time** — Don't overwhelm with multiple questions
-5. **Wait for answers** — Don't assume or proceed without response
+1. **Always start with Step 1** — Intent detection (Build/Learn/Help)
+2. **Never skip Step 4** — Existing work detection + file locations
+3. **Tell them WHERE to put files** — Be specific with paths
+4. **Confirm understanding** — Show summary before proceeding
+5. **One question at a time** — Don't overwhelm
+6. **Support learning** — Not everyone wants to build immediately
+
+---
+
+## File Location Quick Reference
+
+| They Have | Put It Here |
+|:----------|:------------|
+| Frontend code | `USER SPACE/dev-work/plug-and-play/frontend/` |
+| Backend code | `USER SPACE/dev-work/plug-and-play/backend/` |
+| Full project | `USER SPACE/dev-work/plug-and-play/existing/` |
+| Designs | `USER SPACE/dev-work/plug-and-play/designs/` |
+| Kits | `USER SPACE/dev-work/plug-and-play/kits/` |
+| Other assets | `USER SPACE/dev-work/plug-and-play/` |
 
 ---
 
 ## Anti-Patterns
 
-- ❌ Asking 5 questions at once
-- ❌ Assuming they're starting fresh
-- ❌ Skipping to code without knowing context
-- ❌ Ignoring that they have existing work
-- ❌ Using the wrong kit for their project type
+- ❌ Asking multiple questions at once
+- ❌ Assuming they want to build immediately
+- ❌ Not telling them where to put files
+- ❌ Skipping the existing work check
+- ❌ Ignoring help/learning requests
+- ❌ Being vague about file locations
 
 ---
 
-*This flow ensures every user gets the right experience from the first message.*
+*Every user gets the right experience from the first message.*

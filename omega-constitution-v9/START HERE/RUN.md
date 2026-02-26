@@ -16,26 +16,29 @@ BOOT:
 FIRST INTERACTION — MANDATORY:
 Follow ONBOARDING.md exactly. Ask these in order, ONE AT A TIME:
 
-1. MODE: "How would you like to work?"
-   - Full Discovery (guide me through everything)
-   - Quick Start (I filled the seeds already)
-   - Lite (minimal questions)
-   - Just Build (skip to code)
+1. INTENT: "What do you need?"
+   - Build something
+   - Learn how this works first
+   - Get help with a question
 
-2. PROJECT TYPE: "What are you building?"
+2. (If building) MODE: "How would you like to work?"
+   - Full Discovery / Quick Start / Lite / Just Build
+
+3. PROJECT TYPE: "What are you building?"
    - Website / Web App / API / Automation / Other
 
-3. EXISTING WORK: "Do you have existing work?"
+4. EXISTING WORK: "Do you have existing work?"
    - Starting fresh
-   - Have frontend (need backend)
-   - Have backend (need frontend)
-   - Have both (continuing project)
-   - Have designs (no code yet)
+   - Have frontend → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/frontend/"
+   - Have backend → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/backend/"
+   - Have both → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/existing/"
+   - Have designs → Tell them: "Put it in USER SPACE/dev-work/plug-and-play/designs/"
 
-4. PURPOSE: "In 1-2 sentences, what's the core purpose?"
+5. PURPOSE: "In 1-2 sentences, what's the core purpose?"
 
 THEN: Confirm understanding, activate the right kit, proceed.
 
+ALWAYS tell them WHERE to put files.
 DO NOT ask multiple questions at once.
 DO NOT skip these steps.
 DO NOT assume anything.

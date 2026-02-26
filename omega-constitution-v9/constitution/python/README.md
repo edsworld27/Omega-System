@@ -7,10 +7,14 @@ This directory contains the self-healing and continuous-monitoring Python script
 
 ## The Scripts
 
-- `auto_changelog.py`: Generates and maintains a `CHANGELOG.md` file whenever anything in the project is added, modified, or deleted.
-- `auto_security.py`: Continuously scans the `USER SPACE` folder to ensure no raw passwords, `.env` data, or `.pem` keys are accidentally written into the project. It heals by redacting them or warning you.
-- `auto_structure.py`: Ensures the core 4 Pillars (`START HERE`, `CONSTITUTION`, `USER SPACE`, `STORE`) always exist. If a system or user accidentally drops one, it is instantly recreated to prevent structural collapse.
-- `omega_daemon.py`: The master script. Run this once, and it spins up all the automated processes in the background (including the project map/help generator).
+| Script | Purpose |
+|:-------|:--------|
+| `omega_daemon.py` | Master script — runs all watchers in background |
+| `omega_compiler.py` | Exports clean project to Desktop (strips framework) |
+| `auto_changelog.py` | Auto-generates CHANGELOG.md on file changes |
+| `auto_security.py` | Scans for secrets (.env, .pem, keys) and locks them |
+| `auto_structure.py` | Ensures 4 pillars exist, recreates if missing |
+| `auto_help.py` | Generates 00.help.md project map |
 
 ## How to Run Everything
 

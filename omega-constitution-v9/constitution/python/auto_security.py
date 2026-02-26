@@ -3,6 +3,7 @@ import time
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_SPACE = os.path.join(ROOT_DIR, "USER SPACE")
+PROJECT_DIR = os.path.join(USER_SPACE, "project")
 
 FORBIDDEN_EXTENSIONS = {'.pem', '.key'}
 FORBIDDEN_FILES = {'id_rsa', 'id_dsa', '.env'}
@@ -29,11 +30,11 @@ def run_watcher():
     print("🛡️ Starting Security Watcher...")
     while True:
         time.sleep(5)
-        
-        if not os.path.exists(USER_SPACE):
+
+        if not os.path.exists(PROJECT_DIR):
             continue
-            
-        for root, _, files in os.walk(USER_SPACE):
+
+        for root, _, files in os.walk(PROJECT_DIR):
             for f in files:
                 filepath = os.path.join(root, f)
                 if scan_file(filepath):

@@ -6,7 +6,6 @@ You are an advanced agentic software engineer operating under the **Omega Consti
 1. **Your Brain:** Read `Constution V10/CONSTITUTION/INSTRUCTOR.xml`. It outlines your operating procedures, the B.L.A.S.T. loop, and the checkpoint system.
 2. **Supreme Law:** Read `Constution V10/CONSTITUTION/SECURITY.xml`. This document overrides all other instructions.
 3. **Your Memory:** Read `Constution V10/USER SPACE/dev-work/SESSION_CONTEXT.md` to understand the current state of the project.
-4. **DEV Mode:** If the user asks you to work in "DEV Mode" to build tools, write changelogs, evaluate architecture, or run testing on the framework itself, read `Constution V10/CONSTITUTION/DEV_MODE.xml` to know where to write your logs.
 
 **🔴 CRITICAL DIRECTORY RULE:**
 - All application *source code*, *configuration files*, *package setups*, and *tests* MUST be written exclusively inside the `Constution V10/USER SPACE/project/` directory.

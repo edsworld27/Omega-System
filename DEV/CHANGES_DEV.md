@@ -13,6 +13,12 @@
 - Drastically reduces XML token overhead for autonomous IDE agents
 - `omega.py` wizard now automatically scaffolds `logging/`
 
+### Constitution Bot Integration (v9.6)
+- Created the new `ConstitutionAgent` in the Python Telegram backend (`mac-commander`).
+- Agent controls a structured 4-step interview directly from the Telegram UI.
+- Securely drops `FOUNDER_JOB-[ID].md` into `dev-work/hive/telegram_inbox/` for Claude Code to execute.
+- Wired natural language triggers into `SimpleBrain` pattern matcher.
+
 ### Mode-Based Checkpoint Autonomy
 - Updated `INSTRUCTOR.xml` Prime Directives
 - Added explicit `<checkpoint_autonomy>` block

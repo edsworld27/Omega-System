@@ -47,6 +47,10 @@ To directly address the final friction points of the framework, the following ag
 **Status:** ✅ LIVE
 **The Implementation:** Wired `INSTRUCTOR.xml` to actively read the `Mode` (e.g., Quick Start, Just Build) declared in `SESSION_CONTEXT.md`. Autonomous agents (like Antigravity or Cursor) are now explicitly permitted to self-approve and bypass non-critical checkpoints, preserving hard human-review gates only for critical, dangerous steps (CP-5 and CP-10).
 
+### 3. Constitution Bot (Telegram Orchestrator)
+**Status:** ✅ LIVE (v9.6 Backend Integrated)
+**The Implementation:** Analyzed the `mac-commander` architecture and shipped the new `ConstitutionAgent` module. Connected it directly to Telegram to support a 4-step interactive setup wizard (Name -> Audience -> Kit -> Mode). The bot seamlessly compiles the answers and drops a `FOUNDER_JOB-[ID].md` into the new `dev-work/hive/telegram_inbox/` for Claude Code to execute. The backend is fully wired into the NLP router.
+
 ---
 
 ## Final Verdict

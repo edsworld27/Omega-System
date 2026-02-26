@@ -1,6 +1,16 @@
+# System
 .DS_Store
 *.DS_Store
+
+# Secrets (SECURITY.xml §1.1)
 .env
+.env.local
+.env.production
+*.pem
+*.key
+*.p12
+
+# Dependencies
 node_modules/
 .tmp/
 

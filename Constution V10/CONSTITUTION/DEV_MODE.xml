@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev_mode_framework>
+  <metadata>
+    <version>1.0</version>
+    <purpose>Governs how AI agents document and track the development of the Omega Ecosystem itself.</purpose>
+  </metadata>
+
+  <core_directive>
+    When the user invokes "DEV Mode", the agent is acting as an architect modifying the Omega framework (Constitution, Store, or Tools).
+    The documentation workspace shifts exclusively to the **"Omega DEV BUILD"** directory.
+    Do NOT store development logs in USER SPACE.
+  </core_directive>
+
+  <directory_mapping>
+    <base_path>Omega DEV BUILD/</base_path>
+    <changelogs>Omega DEV BUILD/Changle Log/</changelogs>
+    <evaluations>Omega DEV BUILD/Evaluations/</evaluations>
+    <implementations>Omega DEV BUILD/Implementations/</implementations>
+    <testing>Omega DEV BUILD/Testing/</testing>
+    <context>Omega DEV BUILD/Context/</context>
+  </directory_mapping>
+
+  <operational_rules>
+    <rule id="discrete_logging">
+      <instruction>Do not append endless updates to a single giant markdown file.</instruction>
+      <requirement>Every time an update, test, or evaluation is made, create a **NEW** markdown file inside the relevant folder.</requirement>
+      <naming_convention>Filename MUST include the version number and a short description (e.g., `v10.1.0_testing_loop.md`).</naming_convention>
+    </rule>
+
+    <rule id="changelog_protocol">
+      <instruction>When the user asks you to "log something", you are writing a Changelog entry.</instruction>
+      <action>Create a new file in `Omega DEV BUILD/Changle Log/` (e.g., `v10.x.x_feature_update.md`).</action>
+      <content>State the exact version, list the modified files, describe the feature added or bug fixed, and provide a 1-sentence summary.</content>
+    </rule>
+
+    <rule id="evaluations_protocol">
+      <instruction>When assessing architecture, UX, security, or codebase health.</instruction>
+      <action>Create a new file in `Omega DEV BUILD/Evaluations/`.</action>
+      <content>Detail the strengths, weaknesses, remaining gaps, and assign an objective score.</content>
+    </rule>
+
+    <rule id="implementations_protocol">
+      <instruction>When designing a new feature before writing the code.</instruction>
+      <action>Create a new file in `Omega DEV BUILD/Implementations/`.</action>
+      <content>Map out the data flow, the exact files that will need to be touched, and the end-to-end plan.</content>
+    </rule>
+
+    <rule id="testing_protocol">
+      <instruction>When verifying that a fix or new feature works.</instruction>
+      <action>Create a new file in `Omega DEV BUILD/Testing/`.</action>
+      <content>Document the test steps taken, the expected outcome, and the actual confirmed outcome.</content>
+    </rule>
+  </operational_rules>
+
+  <workflow>
+    <step sequence="1">User says: "I want to work in DEV Mode to build X"</step>
+    <step sequence="2">Agent reads `DEV_MODE.xml` to understand the logging locations.</step>
+    <step sequence="3">Agent creates an Implementation plan in `Implementations/`.</step>
+    <step sequence="4">Agent writes the code.</step>
+    <step sequence="5">Agent creates a Test report in `Testing/`.</step>
+    <step sequence="6">Agent creates a final Changelog entry in `Changle Log/` with the new version number.</step>
+  </workflow>
+</dev_mode_framework>

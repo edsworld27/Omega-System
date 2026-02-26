@@ -32,7 +32,7 @@ Ask me what I want to build.
 ## The Master Daemon
 
 Omega comes with self-healing background scripts (auto-updating project maps, security scanners, and changelogs).
-To turn them on, run this command from the `omega-constitution-v9` folder:
+To turn them on, run this command from the `Constution V10` folder:
 
 ```bash
 python3 CONSTITUTION/python/omega_daemon.py

@@ -14,14 +14,14 @@ Copy → Paste into AI → Go.
 
 ### Option 2: Setup Script
 ```bash
-cd omega-constitution-v9
+cd Constution V10
 python3 omega.py
 ```
 Answers a few questions → Sets everything up → Gives you a prompt.
 
 ### Option 3: Read First
-→ [GO.md](omega-constitution-v9/GO.md) — Simplest start
-→ [Training Manual](omega-constitution-v9/START%20HERE/START_HERE.md) — Full guide
+→ [GO.md](Constution V10/GO.md) — Simplest start
+→ [Training Manual](Constution V10/START%20HERE/START_HERE.md) — Full guide
 
 ---
 
@@ -29,7 +29,7 @@ Answers a few questions → Sets everything up → Gives you a prompt.
 
 | Folder | What It Does |
 |:-------|:-------------|
-| [omega-constitution-v9/](omega-constitution-v9/) | The framework |
+| [Constution V10/](Constution V10/) | The framework |
 | [omega-store/](omega-store/) | Kits, skills, MCPs |
 | [omega-claw](https://github.com/edsworld27/omega-claw) | Remote control (Telegram bot) |
 | [DEV/](DEV/) | Framework development |
@@ -40,10 +40,10 @@ Answers a few questions → Sets everything up → Gives you a prompt.
 
 | Doc | Purpose |
 |:----|:--------|
-| [GO.md](omega-constitution-v9/GO.md) | Simplest start |
-| [RUN.md](omega-constitution-v9/START%20HERE/RUN.md) | All prompts |
-| [START_HERE.md](omega-constitution-v9/START%20HERE/START_HERE.md) | Training manual |
-| [OMEGA_LITE.md](omega-constitution-v9/START%20HERE/OMEGA_LITE.md) | Small models |
+| [GO.md](Constution V10/GO.md) | Simplest start |
+| [RUN.md](Constution V10/START%20HERE/RUN.md) | All prompts |
+| [START_HERE.md](Constution V10/START%20HERE/START_HERE.md) | Training manual |
+| [OMEGA_LITE.md](Constution V10/START%20HERE/OMEGA_LITE.md) | Small models |
 
 ---
 
@@ -51,9 +51,9 @@ Answers a few questions → Sets everything up → Gives you a prompt.
 
 | Resource | Description |
 |:---------|:------------|
-| [Kits](omega-store/kits/) | Project templates |
-| [Kit Creation Guide](omega-store/kits/KIT_CREATION_GUIDE.md) | Make your own |
-| [Skills](omega-store/skills/) | Agent templates |
+| [Kits](Constution Store v1/omega-store/kits/) | Project templates |
+| [Kit Creation Guide](Constution Store v1/omega-store/kits/KIT_CREATION_GUIDE.md) | Make your own |
+| [Skills](Constution Store v1/omega-store/skills/) | Agent templates |
 
 ---
 

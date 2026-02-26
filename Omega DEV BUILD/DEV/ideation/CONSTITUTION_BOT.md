@@ -170,8 +170,8 @@ The existing ReporterAgent can be enhanced to:
 TELEGRAM_BOT_TOKEN=your_token
 TELEGRAM_ALLOWED_USER_IDS=your_id
 DANGER_ACTION_PASSKEY=your_passkey
-CONSTITUTION_PATH=~/omega-constitution-v9
-JOBS_DIR=~/omega-constitution-v9/USER SPACE/dev-work/jobs
+CONSTITUTION_PATH=~/Constution V10
+JOBS_DIR=~/Constution V10/USER SPACE/dev-work/jobs
 ```
 
 ### 3. Claude Code Integration

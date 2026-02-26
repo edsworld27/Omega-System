@@ -25,7 +25,7 @@ OMEGA ECOSYSTEM
 ## 🏛️ omega-constitution (This Repo)
 
 ```
-omega-constitution-v9/
+Constution V10/
 ├── omega.py                    ← ENTRY POINT: Run this to set up a project
 ├── GO.md                       ← Quick-start prompt (paste into AI)
 ├── README.md                   ← What this is

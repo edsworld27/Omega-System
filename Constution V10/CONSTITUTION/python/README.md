@@ -18,6 +18,6 @@ This directory contains the self-healing and continuous-monitoring Python script
 
 ## How to Run Everything
 
-1. Open your terminal in the root `omega-constitution-v9` folder.
+1. Open your terminal in the root `Constution V10` folder.
 2. Run `python3 CONSTITUTION/python/omega_daemon.py`
 3. Enjoy your self-healing, automated, highly-secure workspace.

@@ -229,7 +229,7 @@ Tell the AI your project type. It loads the right patterns automatically.
 ## The Folder Structure (You Only Touch `USER SPACE/`)
 
 ```
-omega-constitution-v9/
+Constution V10/
 │
 ├── constitution/          ◄── FOR AI ONLY (don't edit)
 │   ├── SECURITY.xml           Rules the AI follows

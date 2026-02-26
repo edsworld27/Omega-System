@@ -1,86 +1,229 @@
-# OMEGA CONSTITUTION PACK — v9
+# OMEGA CONSTITUTION
 
 **Build anything with AI, the right way.**
 
-A framework that makes AI build things properly — safe, complete, and flexible.
+A framework that makes AI build software properly — safe, complete, and flexible.
 
 ---
 
-## The Core 4 Structure
+## Repository Structure
 
-The Omega Constitution v9 is organized into 4 simple pillars:
-
-```text
-omega-constitution-v9/
-├── START HERE/        ◄── Readmes, training manuals, and startup prompts
-├── CONSTITUTION/      ◄── The AI rules and framework (XML, AI reads this)
-├── USER SPACE/        ◄── Your actual project files go here
-└── STORE/             ◄── Link to the external Omega Store repo (kits, skills, MCPs)
 ```
-
-**[START HERE/START_HERE.md](START_HERE/START_HERE.md)** is your training manual. It has everything you need.
+Omega Constitution Pack/
+│
+├── omega-constitution-v9/     ◄── THE FRAMEWORK
+│   ├── START HERE/               Training manual + startup prompts
+│   ├── CONSTITUTION/             AI rules (XML files)
+│   ├── USER SPACE/               Your project files
+│   │   ├── dev-work/             Framework files (seeds, context)
+│   │   └── project/              Clean deliverable (share this)
+│   └── STORE/                    → Links to omega-store
+│
+├── omega-store/               ◄── KITS & TOOLS
+│   ├── kits/                     Project templates (website, saas, api)
+│   ├── skills/                   Agent templates
+│   └── mcps/                     MCP configurations
+│
+├── DEV/                       ◄── META-DEVELOPMENT
+│   ├── CONTEXT_DEV.md            Our working memory
+│   ├── CHANGES_DEV.md            Constitution changelog
+│   └── IMPLEMENTATION_DEV.md     Roadmap & ideas
+│
+└── README.md                  ◄── YOU ARE HERE
+```
 
 ---
 
 ## Quick Start
 
-1. Open `omega-constitution-v9/` in your AI (Claude, GPT, Cursor, etc.)
-2. Paste this prompt:
+### 1. Clone
+
+```bash
+git clone https://github.com/edsworld27/omega-constitution.git
+cd omega-constitution
+```
+
+### 2. Open in Your AI
+
+Open `omega-constitution-v9/` in Claude, GPT, Cursor, or any AI tool.
+
+### 3. Paste This Prompt
 
 ```
 You are the OMEGA CONSTRUCTOR.
 
 Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml.
-Read user-input/SESSION_CONTEXT.md.
+Read USER SPACE/dev-work/SESSION_CONTEXT.md.
 
-Ask me what I want to build.
+Ask me what I want to build. Guide me through it.
 ```
 
-3. Talk. The AI guides you.
+### 4. Talk
+
+The AI interviews you, fills in requirements, and builds.
 
 ---
 
-## The Master Daemon
+## How It Works
 
-Omega comes with self-healing background scripts (auto-updating project maps, security scanners, and changelogs).
-To turn them on, run this command from the `omega-constitution-v9` folder:
-
-```bash
-python3 CONSTITUTION/python/omega_daemon.py
+```
+┌─────────────────────────────────────────────────────────┐
+│                      YOU (Human)                        │
+│                                                         │
+│   1. Pick a mode (Full / Quick / Lite / Just Build)     │
+│   2. Answer questions (or fill seeds yourself)          │
+│   3. Say "build" when ready                             │
+│   4. Review what AI builds                              │
+│   5. Say "continue" or "fix X"                          │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│                      AI (Agent)                         │
+│                                                         │
+│   • Reads constitution (XML files)                      │
+│   • Asks questions to fill gaps                         │
+│   • Validates requirements before building              │
+│   • Builds in USER SPACE/project/                       │
+│   • Waits for your approval at each step                │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## Modes
 
-| Mode | For | Tokens |
-|:-----|:----|:-------|
-| Full Discovery | AI guides you through everything | ~40k |
-| Quick Start | You filled requirements, AI validates | ~40k |
-| Lite | Small models, simple projects | ~8k |
-| Just Build | Skip to code | ~3k |
+| Mode | Best For | Context |
+|:-----|:---------|:--------|
+| **Full Discovery** | New projects, exploring | ~40k tokens |
+| **Quick Start** | Pre-planned, seeds filled | ~40k tokens |
+| **Lite** | Small models (<32k) | ~8k tokens |
+| **Just Build** | Know exactly what you want | ~3k tokens |
 
-Details in [START_HERE.md](omega-constitution-v9/START_HERE.md)
-
----
-
-## What's Inside v9
-
-```
-omega-constitution-v9/
-├── START_HERE.md        ◄── Training manual (read this)
-├── RUN.md               ◄── All startup prompts
-├── OMEGA_LITE.md        ◄── Condensed rules for small models
-├── constitution/        ◄── AI rules (XML, you don't need to read)
-├── user-input/          ◄── Your project files go here
-└── store/               ◄── Kits, skills, patterns
-```
+All prompts are in [omega-constitution-v9/START HERE/RUN.md](omega-constitution-v9/START%20HERE/RUN.md)
 
 ---
 
-## Previous Versions
+## The Build Flow
 
-- `omega-v3/` — Earlier version, preserved for reference
+```
+DISCOVER ──► PLAN ──► BUILD ──► TEST ──► SHIP
+
+    │          │         │         │
+    ▼          ▼         ▼         ▼
+ You answer  You approve  You review  You approve
+ questions   the plan     the code    results
+```
+
+At every step: AI stops and waits for you. **You are the pilot.**
+
+---
+
+## Project Handoff
+
+When your project is complete:
+
+```
+USER SPACE/
+├── dev-work/     ← Framework files (don't share)
+└── project/      ← Clean deliverable (share this!)
+```
+
+The `project/` folder is always clean and ready to hand off. No compilation needed.
+
+Or use the compiler for a Desktop export:
+```bash
+python3 CONSTITUTION/python/omega_compiler.py
+```
+
+---
+
+## Kits (Project Templates)
+
+Kits auto-activate based on project type:
+
+| Kit | For |
+|:----|:----|
+| **website** | Marketing sites, landing pages |
+| **saas** | SaaS apps with auth, billing |
+| **api** | API-first backends |
+| **automation** | n8n, workflows, integrations |
+
+Kits live in [omega-store/kits/](omega-store/kits/)
+
+### Create Your Own Kit
+
+Use the template: [omega-store/kits/_template/](omega-store/kits/_template/)
+
+Guide: [KIT_CREATION_GUIDE.md](omega-store/kits/KIT_CREATION_GUIDE.md)
+
+---
+
+## The Golden Rules
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│   1. SECURITY IS SUPREME                                │
+│      AI never exposes secrets or bypasses safety        │
+│                                                         │
+│   2. YOU ARE THE PILOT                                  │
+│      AI executes, you decide                            │
+│                                                         │
+│   3. FUNCTION BEFORE FORM                               │
+│      Make it work, then make it pretty                  │
+│                                                         │
+│   4. ASK, DON'T ASSUME                                  │
+│      AI asks when unclear, never guesses                │
+│                                                         │
+│   5. SHOW, DON'T TELL                                   │
+│      AI provides evidence, not just claims              │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Files You Need
+
+| File | What It Does |
+|:-----|:-------------|
+| [START_HERE.md](omega-constitution-v9/START%20HERE/START_HERE.md) | Full training manual |
+| [RUN.md](omega-constitution-v9/START%20HERE/RUN.md) | All startup prompts |
+| [OMEGA_LITE.md](omega-constitution-v9/START%20HERE/OMEGA_LITE.md) | Condensed rules (small models) |
+
+---
+
+## Contributing
+
+### To the Framework
+- Fork omega-constitution
+- Make changes
+- PR with description
+
+### To the Store
+- Fork omega-store
+- Add your kit/skill
+- PR with description
+
+See [DEV/](DEV/) for how we develop the framework itself.
+
+---
+
+## Links
+
+| Resource | URL |
+|:---------|:----|
+| Constitution Repo | [github.com/edsworld27/omega-constitution](https://github.com/edsworld27/omega-constitution) |
+| Store Repo | [github.com/edsworld27/omega-store](https://github.com/edsworld27/omega-store) |
+
+---
+
+## License
+
+MIT
 
 ---
 

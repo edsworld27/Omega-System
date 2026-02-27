@@ -1,0 +1,37 @@
+{
+    "project_name": "Omega Claw Demo App",
+    "project_type": "Security-First Web App",
+    "status": "in_progress",
+    "tasks": [
+        {
+            "id": "T001",
+            "phase": "Initialization",
+            "description": "Read CONSTITUTION/omega-index.md and ingest Security and Quality protocols via GitHub MCP.",
+            "status": "pending"
+        },
+        {
+            "id": "T002",
+            "phase": "Initialization",
+            "description": "Run omega.py prompt generator to establish USER SPACE structure.",
+            "status": "pending"
+        },
+        {
+            "id": "T003",
+            "phase": "Architecture",
+            "description": "Generate Next.js scaffolding in USER SPACE/project/src with Supabase DB layout.",
+            "status": "pending"
+        },
+        {
+            "id": "T004",
+            "phase": "Security Audit",
+            "description": "Flatten the generated src code using compressor.py and verify against Security rules.",
+            "status": "pending"
+        },
+        {
+            "id": "T005",
+            "phase": "Execution",
+            "description": "Implement authentication endpoints.",
+            "status": "pending"
+        }
+    ]
+}

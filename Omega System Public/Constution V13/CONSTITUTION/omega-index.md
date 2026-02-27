@@ -15,7 +15,8 @@ When you need to reference specific rules, methodologies, or blueprints, execute
 *   **Quality & Best Practices:** `QUALITY.xml`, `PRACTICES.xml`
 *   **Agent Blueprints:** `blueprints/AGENT_MD.md`, `blueprints/AGENT_WORKFLOW.md`
 *   **Project Documents:** `blueprints/PRD.md`, `blueprints/SOP.md`, `blueprints/TEST_PLAN.md`
-*   **Python Tooling:** `/python/` (Contains helper scripts like compiler and watcher)
+*   **Python Tooling:** Built-in automation scripts (e.g., `compressor.py`, `watchdog.py`) are now managed via the external **Omega Claw Plugin**.
+    - Repository: [https://github.com/edsworld27/omega-claw](https://github.com/edsworld27/omega-claw)
 *   **Testing:** `/tests/COMPLIANCE_TESTS.md`
 
 ## 🛒 Omega Store & Kits

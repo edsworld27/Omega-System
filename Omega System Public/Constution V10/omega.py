@@ -154,8 +154,8 @@ def generate_prompt(name, project_type, mode, has_existing):
 
     prompt = f"""You are the OMEGA CONSTRUCTOR.
 
-Read constitution/SECURITY.xml, FRAMEWORK.xml, INSTRUCTOR.xml, ONBOARDING.md.
-Read USER SPACE/dev-work/SESSION_CONTEXT.md.
+Read CONSTITUTION/omega-index.md to find the core rules.
+Once you fetch the necessary security and framework protocols from GitHub via your MCP or internet browser tools, read USER SPACE/dev-work/SESSION_CONTEXT.md.
 
 CONTEXT (from setup):
 - Project: {name}

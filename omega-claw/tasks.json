@@ -10,7 +10,7 @@
         {
             "id": "T001",
             "phase": "Initialization",
-            "description": "Read CONSTITUTION/omega-index.md and ingest Security and Quality protocols via GitHub MCP.",
+            "description": "Read CONSTITUTION/omega-index.md and ingest Security and Quality protocols via GitHub MCP. **HARD VERIFICATION REQUIRED**: Do not proceed to T002 unless you have explicitly matched and loaded the 'OMEGA_SECURITY_PROTOCOL_v10' string from the remote SECURITY.xml file into your active context window.",
             "status": "pending"
         },
         {

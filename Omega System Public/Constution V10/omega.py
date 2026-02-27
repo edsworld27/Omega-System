@@ -157,6 +157,12 @@ def generate_prompt(name, project_type, mode, has_existing):
 Read CONSTITUTION/omega-index.md to find the core rules.
 Once you fetch the necessary security and framework protocols from GitHub via your MCP or internet browser tools, read USER SPACE/dev-work/SESSION_CONTEXT.md.
 
+> [!FALLBACK PROTOCOL]
+> If the GitHub API throttles your fetch request, or you temporarily lose internet/MCP tool bindings, 
+> you MUST fallback to the local reference repository copy located at: 
+> `../../Constution V10/`
+> Do not execute "blind" without these rules.
+
 CONTEXT (from setup):
 - Project: {name}
 - Type: {type_map.get(project_type, 'Other')}
@@ -165,6 +171,11 @@ CONTEXT (from setup):
 
 Onboarding is complete. Continue from CP-0 (Seed Scan).
 Activate the appropriate kit and proceed with discovery.
+
+> [!RE-PLANNING DIRECTIVE]
+> If a task fundamentally fails or the project scope organically pivots mid-generation, 
+> you possess the explicit authority to halt current execution, analyze the blocker, 
+> and dynamically rewrite the `tasks.json` schema to create a revised action plan before resuming.
 """
     return prompt
 

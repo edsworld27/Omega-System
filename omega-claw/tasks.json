@@ -2,6 +2,10 @@
     "project_name": "Omega Claw Demo App",
     "project_type": "Security-First Web App",
     "status": "in_progress",
+    "meta": {
+        "dynamic_planning": true,
+        "on_failure": "halt current execution, analyze blocker, rewrite tasks.json with new path, resume execution loop"
+    },
     "tasks": [
         {
             "id": "T001",
